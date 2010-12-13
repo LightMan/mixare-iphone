@@ -92,18 +92,48 @@
 	//[alert release];
 }
 
--(void) didRotate:(NSNotification *)notification{ 
+-(void)didRotate:(NSNotification *)notification{ 
     //Maintain the camera in Landscape orientation [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
     //UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-    if([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
+    if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
         [self setViewToLandscape:augViewController.view];
         beforeWasLandscape = YES;
     }
-    if([[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait && beforeWasLandscape){
+    if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait && beforeWasLandscape){
         [self setViewToPortrait:augViewController.view];
         beforeWasLandscape = NO;
     }
-    NSLog(@"DID ROTATE");
+	
+	// -----------------------------------------------------------------------------
+	// Debug Orientation
+	NSString *orientation;
+	switch ([[UIDevice currentDevice] orientation]) {
+	case UIDeviceOrientationUnknown:
+		orientation = @"UIDeviceOrientationUnknown";
+		break;
+	case UIDeviceOrientationPortrait:
+		orientation = @"UIDeviceOrientationPortrait";
+		break;
+	case UIDeviceOrientationPortraitUpsideDown:
+		orientation = @"UIDeviceOrientationPortraitUpsideDown";
+		break;
+	case UIDeviceOrientationLandscapeLeft:
+		orientation = @"UIDeviceOrientationLandscapeLeft";
+		break;
+	case UIDeviceOrientationLandscapeRight:
+		orientation = @"UIDeviceOrientationLandscapeRight";
+		break;
+	case UIDeviceOrientationFaceUp:
+		orientation = @"UIDeviceOrientationFaceUp";
+		break;
+	case UIDeviceOrientationFaceDown:
+		orientation = @"UIDeviceOrientationFaceDown";
+		break;
+	default:
+		orientation = @"Orientación desconocida";		
+	}
+    NSLog(@"DID ROTATE to orientation %@", orientation);
+	// -----------------------------------------------------------------------------
     
 }
 
@@ -215,9 +245,6 @@
         NSLog(@"RADIUS VALUE: %f", radius);
         _valueLabel.text= [NSString stringWithFormat:@"%.2f km",radius];
     }
-    
-        
-    
 }
 
 -(void) initLocationManager{
@@ -269,6 +296,7 @@
     }
     return ret;
 }
+
 -(void)downloadData{
 	//NSAutoreleasePool * pool = [[NSAutoreleasePool alloc]init];
 	jHandler = [[JsonHandler alloc]init];
@@ -355,10 +383,7 @@
         [_data addObjectsFromArray:[jHandler processMixareJSONData:mixareData]];
         NSLog(@"data count: %d", [_data count]);
         [mixareData release];
-    }
-	
-    
-    
+    }	
     
 	[jHandler release];
 	//[pool release];
@@ -374,7 +399,6 @@
     [augViewController startListening];
     
 	NSLog(@"POIS CHANGED");
-	
 }
 
 -(void)buttonClick:(id)sender{
@@ -402,14 +426,13 @@
 }
 
 
-
 #define BOX_WIDTH 150
 #define BOX_HEIGHT 100
 
-- (MarkerView *)viewForCoordinate:(PoiItem *)coordinate {
-	
+- (MarkerView *)viewForCoordinate:(PoiItem *)coordinate {	
 	CGRect theFrame = CGRectMake(0, 0, BOX_WIDTH, BOX_HEIGHT);
 	MarkerView *tempView = [[MarkerView alloc] initWithFrame:theFrame];
+	
 	UIImageView *pointView = [[UIImageView alloc] initWithFrame:CGRectZero];
     //tempView.backgroundColor = [UIColor grayColor];
 	if([coordinate.source isEqualToString:@"WIKIPEDIA"]|| [coordinate.source isEqualToString:@"MIXARE"]){
@@ -420,7 +443,6 @@
        pointView.image = [UIImage imageNamed:@"buzz_logo.png"];
 	}
 	
-    
 	pointView.frame = CGRectMake((int)(BOX_WIDTH / 2.0-pointView.image.size.width / 2.0), 0, pointView.image.size.width, pointView.image.size.height);
 	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, BOX_HEIGHT / 2.0 , BOX_WIDTH, 20.0)];
 	titleLabel.backgroundColor = [UIColor colorWithWhite:.3 alpha:.8];
@@ -459,18 +481,15 @@
      */
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
 }
-
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     /*
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     /*
@@ -558,10 +577,10 @@
      */
 }
 
-
 - (void)dealloc {
     [_tabBarController release];
     [window release];
+	
     [super dealloc];
 }
 

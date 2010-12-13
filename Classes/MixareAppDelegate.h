@@ -47,15 +47,18 @@
     UILabel * maxRadiusLabel;
     MoreViewController * _moreViewController;
     SourceViewController * _sourceViewController;
-    @private
+
+@private
+	
     BOOL beforeWasLandscape;
     IBOutlet UIView * notificationView;
 	
 }
 
+@property (nonatomic, retain) CLLocationManager * locManager;
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
-@property (nonatomic, retain) CLLocationManager * locManager;
 @property (nonatomic, retain) IBOutlet ListViewController * listViewController;
 @property (nonatomic, retain) IBOutlet NSMutableArray * data;
 @property (nonatomic, retain) IBOutlet MapViewController* mapViewController;
@@ -66,13 +69,14 @@
 @property (nonatomic, retain) IBOutlet UILabel * valueLabel;
 
 
--(void) iniARView;
+- (void) iniARView;
 - (MarkerView *)viewForCoordinate:(PoiItem *)coordinate;
--(void)initLocationManager;
--(void)mapData;
--(void)downloadData;
--(void) initControls;
--(BOOL)checkIfDataSourceIsEanabled: (NSString *)source;
--(void)setViewToLandscape:(UIView*)viewObject;
--(void)setViewToPortrait:(UIView*)viewObject;
+- (void)initLocationManager;
+- (void)mapData;
+- (void)downloadData;
+- (void) initControls;
+- (BOOL)checkIfDataSourceIsEanabled: (NSString *)source;
+- (void)setViewToLandscape:(UIView*)viewObject;
+- (void)setViewToPortrait:(UIView*)viewObject;
+
 @end
