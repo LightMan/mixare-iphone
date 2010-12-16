@@ -16,12 +16,6 @@
 		3685BA2C1275653F005FF922 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3685BA2B1275653F005FF922 /* CoreLocation.framework */; };
 		3685BA2E12756566005FF922 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3685BA2D12756566005FF922 /* MapKit.framework */; };
 		36876BD4128BFFCC00C416F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36876BD3128BFFCC00C416F5 /* QuartzCore.framework */; };
-		FA6171AB12B63ABA0019A590 /* PhysicalPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171A812B63ABA0019A590 /* PhysicalPlace.m */; };
-		FA6171AC12B63ABA0019A590 /* PoiItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171AA12B63ABA0019A590 /* PoiItem.m */; };
-		FA6171BB12B63AE60019A590 /* Radar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171B312B63AE60019A590 /* Radar.m */; };
-		FA6171BC12B63AE60019A590 /* RadarViewPortView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171B512B63AE60019A590 /* RadarViewPortView.m */; };
-		FA6171BD12B63AE60019A590 /* AugmentedGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171B812B63AE60019A590 /* AugmentedGeoViewController.m */; };
-		FA6171BE12B63AE60019A590 /* AugmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171BA12B63AE60019A590 /* AugmentedViewController.m */; };
 		FA6171C912B63AFF0019A590 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171C312B63AFF0019A590 /* DataSource.m */; };
 		FA6171CA12B63AFF0019A590 /* JsonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171C512B63AFF0019A590 /* JsonHandler.m */; };
 		FA6171D812B63B0C0019A590 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171CF12B63B0C0019A590 /* NSObject+SBJSON.m */; };
@@ -40,7 +34,6 @@
 		FA61720712B63B350019A590 /* mixare-logo_57x57_72_dpi.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6171EF12B63B350019A590 /* mixare-logo_57x57_72_dpi.png */; };
 		FA61720812B63B350019A590 /* mixare_512x512px.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6171F012B63B350019A590 /* mixare_512x512px.png */; };
 		FA61721712B63C250019A590 /* MixareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61721612B63C250019A590 /* MixareAppDelegate.m */; };
-		FA61724712B641BA0019A590 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61724612B641BA0019A590 /* MainWindow.xib */; };
 		FA61728D12B64EEF0019A590 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = FA61728912B64EEF0019A590 /* 103-map.png */; };
 		FA61728E12B64EEF0019A590 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = FA61728A12B64EEF0019A590 /* 86-camera.png */; };
 		FA61729012B64EEF0019A590 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = FA61728C12B64EEF0019A590 /* list.png */; };
@@ -59,11 +52,18 @@
 		FA6172D012B651F20019A590 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6172CE12B651F20019A590 /* WebViewController.m */; };
 		FA6172D112B651F20019A590 /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6172CF12B651F20019A590 /* WebView.xib */; };
 		FA6172D312B652390019A590 /* logo_mixare_round.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6172D212B652390019A590 /* logo_mixare_round.png */; };
-		FA6172D612B652870019A590 /* MarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6172D512B652870019A590 /* MarkerView.m */; };
 		FA6172E912B652DA0019A590 /* buzz_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6172E512B652DA0019A590 /* buzz_logo.png */; };
 		FA6172EB12B652DA0019A590 /* twitter_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6172E712B652DA0019A590 /* twitter_logo.png */; };
 		FA6172EC12B652DA0019A590 /* wikipedia_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6172E812B652DA0019A590 /* wikipedia_logo.png */; };
 		FA6172EF12B653010019A590 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6172EE12B653010019A590 /* circle.png */; };
+		FA61731E12B670A10019A590 /* MarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61731612B670A10019A590 /* MarkerView.m */; };
+		FA61731F12B670A10019A590 /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61731912B670A10019A590 /* RadarView.m */; };
+		FA61732012B670A10019A590 /* RadarScopeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61731B12B670A10019A590 /* RadarScopeView.m */; };
+		FA61732A12B670FA0019A590 /* PhysicalPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61732712B670FA0019A590 /* PhysicalPlace.m */; };
+		FA61732B12B670FA0019A590 /* PoiItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61732912B670FA0019A590 /* PoiItem.m */; };
+		FA72F35F12B7B653004739A8 /* AugmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72F35D12B7B653004739A8 /* AugmentedViewController.m */; };
+		FA72F36012B7B653004739A8 /* AugmentedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA72F35E12B7B653004739A8 /* AugmentedViewController.xib */; };
+		FA8BC7D512BA245800D01D6E /* MixareAppDelegate.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8BC7D412BA245800D01D6E /* MixareAppDelegate.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,18 +80,6 @@
 		3685BA2B1275653F005FF922 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3685BA2D12756566005FF922 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		36876BD3128BFFCC00C416F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FA6171A712B63ABA0019A590 /* PhysicalPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalPlace.h; sourceTree = "<group>"; };
-		FA6171A812B63ABA0019A590 /* PhysicalPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicalPlace.m; sourceTree = "<group>"; };
-		FA6171A912B63ABA0019A590 /* PoiItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiItem.h; sourceTree = "<group>"; };
-		FA6171AA12B63ABA0019A590 /* PoiItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiItem.m; sourceTree = "<group>"; };
-		FA6171B212B63AE60019A590 /* Radar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radar.h; sourceTree = "<group>"; };
-		FA6171B312B63AE60019A590 /* Radar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radar.m; sourceTree = "<group>"; };
-		FA6171B412B63AE60019A590 /* RadarViewPortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarViewPortView.h; sourceTree = "<group>"; };
-		FA6171B512B63AE60019A590 /* RadarViewPortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarViewPortView.m; sourceTree = "<group>"; };
-		FA6171B712B63AE60019A590 /* AugmentedGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AugmentedGeoViewController.h; sourceTree = "<group>"; };
-		FA6171B812B63AE60019A590 /* AugmentedGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AugmentedGeoViewController.m; sourceTree = "<group>"; };
-		FA6171B912B63AE60019A590 /* AugmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AugmentedViewController.h; sourceTree = "<group>"; };
-		FA6171BA12B63AE60019A590 /* AugmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AugmentedViewController.m; sourceTree = "<group>"; };
 		FA6171C212B63AFF0019A590 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		FA6171C312B63AFF0019A590 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		FA6171C412B63AFF0019A590 /* JsonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonHandler.h; sourceTree = "<group>"; };
@@ -145,12 +133,24 @@
 		FA6172CE12B651F20019A590 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		FA6172CF12B651F20019A590 /* WebView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
 		FA6172D212B652390019A590 /* logo_mixare_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_mixare_round.png; sourceTree = "<group>"; };
-		FA6172D412B652870019A590 /* MarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerView.h; sourceTree = "<group>"; };
-		FA6172D512B652870019A590 /* MarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerView.m; sourceTree = "<group>"; };
 		FA6172E512B652DA0019A590 /* buzz_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buzz_logo.png; sourceTree = "<group>"; };
 		FA6172E712B652DA0019A590 /* twitter_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_logo.png; sourceTree = "<group>"; };
 		FA6172E812B652DA0019A590 /* wikipedia_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wikipedia_logo.png; sourceTree = "<group>"; };
 		FA6172EE12B653010019A590 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		FA61731512B670A10019A590 /* MarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerView.h; sourceTree = "<group>"; };
+		FA61731612B670A10019A590 /* MarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerView.m; sourceTree = "<group>"; };
+		FA61731812B670A10019A590 /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarView.h; sourceTree = "<group>"; };
+		FA61731912B670A10019A590 /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
+		FA61731A12B670A10019A590 /* RadarScopeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarScopeView.h; sourceTree = "<group>"; };
+		FA61731B12B670A10019A590 /* RadarScopeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarScopeView.m; sourceTree = "<group>"; };
+		FA61732612B670FA0019A590 /* PhysicalPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalPlace.h; sourceTree = "<group>"; };
+		FA61732712B670FA0019A590 /* PhysicalPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicalPlace.m; sourceTree = "<group>"; };
+		FA61732812B670FA0019A590 /* PoiItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiItem.h; sourceTree = "<group>"; };
+		FA61732912B670FA0019A590 /* PoiItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiItem.m; sourceTree = "<group>"; };
+		FA72F35C12B7B653004739A8 /* AugmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AugmentedViewController.h; sourceTree = "<group>"; };
+		FA72F35D12B7B653004739A8 /* AugmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AugmentedViewController.m; sourceTree = "<group>"; };
+		FA72F35E12B7B653004739A8 /* AugmentedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AugmentedViewController.xib; sourceTree = "<group>"; };
+		FA8BC7D412BA245800D01D6E /* MixareAppDelegate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MixareAppDelegate.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,62 +209,18 @@
 			children = (
 				FA61721512B63C250019A590 /* MixareAppDelegate.h */,
 				FA61721612B63C250019A590 /* MixareAppDelegate.m */,
+				FA8BC7D412BA245800D01D6E /* MixareAppDelegate.xib */,
 				FA61724612B641BA0019A590 /* MainWindow.xib */,
 				28A0AB4B0D9B1048005BE974 /* Mixare_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				FA6171BF12B63AFF0019A590 /* data */,
+				FA61731012B670A10019A590 /* Camera */,
 				FA6172B812B651430019A590 /* Sources */,
 				FA6172C112B6517C0019A590 /* List */,
 				FA6172C412B6517C0019A590 /* Map */,
 				FA6172C912B651940019A590 /* More */,
-				FA6171A612B63ABA0019A590 /* reality */,
-				FA6171B012B63AD10019A590 /* gui */,
-				FA6171BF12B63AFF0019A590 /* data */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		FA6171A612B63ABA0019A590 /* reality */ = {
-			isa = PBXGroup;
-			children = (
-				FA6171A712B63ABA0019A590 /* PhysicalPlace.h */,
-				FA6171A812B63ABA0019A590 /* PhysicalPlace.m */,
-				FA6171A912B63ABA0019A590 /* PoiItem.h */,
-				FA6171AA12B63ABA0019A590 /* PoiItem.m */,
-			);
-			path = reality;
-			sourceTree = "<group>";
-		};
-		FA6171B012B63AD10019A590 /* gui */ = {
-			isa = PBXGroup;
-			children = (
-				FA6171B112B63AE60019A590 /* Radar */,
-				FA6171B612B63AE60019A590 /* AugmentedViewControllers */,
-			);
-			path = gui;
-			sourceTree = "<group>";
-		};
-		FA6171B112B63AE60019A590 /* Radar */ = {
-			isa = PBXGroup;
-			children = (
-				FA6171B212B63AE60019A590 /* Radar.h */,
-				FA6171B312B63AE60019A590 /* Radar.m */,
-				FA6171B412B63AE60019A590 /* RadarViewPortView.h */,
-				FA6171B512B63AE60019A590 /* RadarViewPortView.m */,
-			);
-			path = Radar;
-			sourceTree = "<group>";
-		};
-		FA6171B612B63AE60019A590 /* AugmentedViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				FA6171B712B63AE60019A590 /* AugmentedGeoViewController.h */,
-				FA6171B812B63AE60019A590 /* AugmentedGeoViewController.m */,
-				FA6171B912B63AE60019A590 /* AugmentedViewController.h */,
-				FA6171BA12B63AE60019A590 /* AugmentedViewController.m */,
-				FA6172D412B652870019A590 /* MarkerView.h */,
-				FA6172D512B652870019A590 /* MarkerView.m */,
-			);
-			path = AugmentedViewControllers;
 			sourceTree = "<group>";
 		};
 		FA6171BF12B63AFF0019A590 /* data */ = {
@@ -420,6 +376,34 @@
 			path = reality;
 			sourceTree = "<group>";
 		};
+		FA61731012B670A10019A590 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				FA72F35C12B7B653004739A8 /* AugmentedViewController.h */,
+				FA72F35D12B7B653004739A8 /* AugmentedViewController.m */,
+				FA72F35E12B7B653004739A8 /* AugmentedViewController.xib */,
+				FA61731512B670A10019A590 /* MarkerView.h */,
+				FA61731612B670A10019A590 /* MarkerView.m */,
+				FA61732612B670FA0019A590 /* PhysicalPlace.h */,
+				FA61732712B670FA0019A590 /* PhysicalPlace.m */,
+				FA61732812B670FA0019A590 /* PoiItem.h */,
+				FA61732912B670FA0019A590 /* PoiItem.m */,
+				FA61731712B670A10019A590 /* Radar */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		FA61731712B670A10019A590 /* Radar */ = {
+			isa = PBXGroup;
+			children = (
+				FA61731812B670A10019A590 /* RadarView.h */,
+				FA61731912B670A10019A590 /* RadarView.m */,
+				FA61731A12B670A10019A590 /* RadarScopeView.h */,
+				FA61731B12B670A10019A590 /* RadarScopeView.m */,
+			);
+			path = Radar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -485,7 +469,6 @@
 				FA61720612B63B350019A590 /* mixare-logo_114x114_72_dpi.png in Resources */,
 				FA61720712B63B350019A590 /* mixare-logo_57x57_72_dpi.png in Resources */,
 				FA61720812B63B350019A590 /* mixare_512x512px.png in Resources */,
-				FA61724712B641BA0019A590 /* MainWindow.xib in Resources */,
 				FA61728D12B64EEF0019A590 /* 103-map.png in Resources */,
 				FA61728E12B64EEF0019A590 /* 86-camera.png in Resources */,
 				FA61729012B64EEF0019A590 /* list.png in Resources */,
@@ -502,6 +485,8 @@
 				FA6172EB12B652DA0019A590 /* twitter_logo.png in Resources */,
 				FA6172EC12B652DA0019A590 /* wikipedia_logo.png in Resources */,
 				FA6172EF12B653010019A590 /* circle.png in Resources */,
+				FA72F36012B7B653004739A8 /* AugmentedViewController.xib in Resources */,
+				FA8BC7D512BA245800D01D6E /* MixareAppDelegate.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,12 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				FA6171AB12B63ABA0019A590 /* PhysicalPlace.m in Sources */,
-				FA6171AC12B63ABA0019A590 /* PoiItem.m in Sources */,
-				FA6171BB12B63AE60019A590 /* Radar.m in Sources */,
-				FA6171BC12B63AE60019A590 /* RadarViewPortView.m in Sources */,
-				FA6171BD12B63AE60019A590 /* AugmentedGeoViewController.m in Sources */,
-				FA6171BE12B63AE60019A590 /* AugmentedViewController.m in Sources */,
 				FA6171C912B63AFF0019A590 /* DataSource.m in Sources */,
 				FA6171CA12B63AFF0019A590 /* JsonHandler.m in Sources */,
 				FA6171D812B63B0C0019A590 /* NSObject+SBJSON.m in Sources */,
@@ -533,7 +512,12 @@
 				FA6172C812B6517C0019A590 /* MapViewController.m in Sources */,
 				FA6172CC12B651940019A590 /* MoreViewController.m in Sources */,
 				FA6172D012B651F20019A590 /* WebViewController.m in Sources */,
-				FA6172D612B652870019A590 /* MarkerView.m in Sources */,
+				FA61731E12B670A10019A590 /* MarkerView.m in Sources */,
+				FA61731F12B670A10019A590 /* RadarView.m in Sources */,
+				FA61732012B670A10019A590 /* RadarScopeView.m in Sources */,
+				FA61732A12B670FA0019A590 /* PhysicalPlace.m in Sources */,
+				FA61732B12B670FA0019A590 /* PoiItem.m in Sources */,
+				FA72F35F12B7B653004739A8 /* AugmentedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +550,7 @@
 				INFOPLIST_FILE = "Mixare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
 				PRODUCT_NAME = Mixare;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6E16BE1D-3300-45AD-8D10-E5737817A713";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "865544B7-7F9B-4283-AE40-F5F4A9C7CE26";
 			};
 			name = Debug;
 		};

@@ -165,7 +165,7 @@
 	}else{
 		
 	}
-    if([[[NSUserDefaults standardUserDefaults] objectForKey:cell.sourceLabel.text] isEqualToString:@"TRUE"]) {
+    if([[NSUserDefaults standardUserDefaults] boolForKey:cell.sourceLabel.text]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
 	return cell;
@@ -177,11 +177,11 @@
 	if(cell != nil){
 		if (cell.accessoryType == UITableViewCellAccessoryNone){
 			cell.accessoryType = UITableViewCellAccessoryCheckmark;
-			[[NSUserDefaults standardUserDefaults] setObject:@"TRUE" forKey:cell.sourceLabel.text];
+			[[NSUserDefaults standardUserDefaults] setBool:YES forKey:cell.sourceLabel.text];
             //[[NSUserDefaults standardUserDefaults] setObject:@"CHANGED" forKey:@"changeStatus";
 		}else{
 			cell.accessoryType = UITableViewCellAccessoryNone;
-			[[NSUserDefaults standardUserDefaults] setObject:@"FALSE" forKey:cell.sourceLabel.text];
+			[[NSUserDefaults standardUserDefaults] setBool:NO forKey:cell.sourceLabel.text];
 		}
 	}else NSLog(@"NOT WORKING");
 

@@ -1,0 +1,1448 @@
+TMixare
+v7
+r0
+t314022157.075337
+cCheck dependencies
+cProcessInfoPlistFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Info.plist" Mixare-Info.plist
+cCopyStringsFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/English.lproj/Localizable.strings" Resources/English.lproj/Localizable.strings
+cCopyStringsFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/German.lproj/Localizable.strings" Resources/German.lproj/Localizable.strings
+cCopyStringsFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Italian.lproj/Localizable.strings" Resources/Italian.lproj/Localizable.strings
+cCpResource build/Debug-iphonesimulator/Mixare.app/Default.png Resources/Default.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/Default@2x.png Resources/Default@2x.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/icon_edit.png Resources/icons/icon_edit.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/icon_map.png Resources/icons/icon_map.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/icon_white.png Resources/icons/icon_white.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/icon_white1.png Resources/icons/icon_white1.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/logo.png Resources/icons/logo.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/mixare-logo_114x114_72_dpi.png Resources/mixare-logo_114x114_72_dpi.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/mixare-logo_57x57_72_dpi.png Resources/mixare-logo_57x57_72_dpi.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/mixare_512x512px.png Resources/mixare_512x512px.png
+cCompileXIB "/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib"
+cCpResource build/Debug-iphonesimulator/Mixare.app/103-map.png Resources/tabBarIcons/103-map.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/86-camera.png Resources/tabBarIcons/86-camera.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/list.png Resources/tabBarIcons/list.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/source.png Resources/tabBarIcons/source.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/icon_datasource.png Resources/icons/icon_datasource.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/buzz_logo_small.png Resources/listView/buzz_logo_small.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/twitter_logo_small.png Resources/listView/twitter_logo_small.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/wikipedia_logo_small.png Resources/listView/wikipedia_logo_small.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/mixare_button.png Resources/moreView/mixare_button.png
+cCompileXIB "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.xib"
+cCompileXIB "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebView.xib"
+cCpResource build/Debug-iphonesimulator/Mixare.app/logo_mixare_round.png Resources/listView/logo_mixare_round.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/buzz_logo.png Resources/sources/buzz_logo.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/twitter_logo.png Resources/sources/twitter_logo.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/wikipedia_logo.png Resources/sources/wikipedia_logo.png
+cCpResource build/Debug-iphonesimulator/Mixare.app/circle.png Resources/reality/circle.png
+cProcessPCH /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch.gch Mixare_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/main.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/../main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/DataSource.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/JsonHandler.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSObject+SBJSON.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSString+SBJSON.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonBase.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonParser.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonWriter.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MixareAppDelegate.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceTableCell.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/ListViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MapViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MoreViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/WebViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedGeoViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MarkerView.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/Radar.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/RadarViewPortView.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PhysicalPlace.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PoiItem.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare" normal i386
+cGenerateDSYMFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app.dSYM" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare"
+cTouch "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/../main.m
+c000000004D022219000000000000015E
+t1291985433
+s350
+i<UIKit/UIKit.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.h
+c000000004D02221900000000000003D2
+t1291985433
+s978
+i<Foundation/Foundation.h>
+i"AugmentedViewController.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.m
+c000000004D065A7D000000000000059A
+t1292262013
+s1434
+i"AugmentedGeoViewController.h"
+i"PhysicalPlace.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.h
+c000000004D0653D80000000000000D46
+t1292260312
+s3398
+i<UIKit/UIKit.h>
+i"MarkerView.h"
+i<CoreLocation/CoreLocation.h>
+i"Radar.h"
+i"PoiItem.h"
+i"RadarViewPortView.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.m
+c000000004D0653D80000000000004112
+t1292260312
+s16658
+i"AugmentedViewController.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.h
+c000000004D063C310000000000000541
+t1292254257
+s1345
+i<UIKit/UIKit.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.m
+c000000004D0661C300000000000015CC
+t1292263875
+s5580
+i"MarkerView.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.h
+c000000004D02221900000000000004F8
+t1291985433
+s1272
+i<Foundation/Foundation.h>
+i"PoiItem.h"
+i<CoreLocation/CoreLocation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.m
+c000000004D0222190000000000000977
+t1291985433
+s2423
+i"PhysicalPlace.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.h
+c000000004D022219000000000000087E
+t1291985433
+s2174
+i<Foundation/Foundation.h>
+i<MapKit/MapKit.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.m
+c000000004D022219000000000000099E
+t1291985433
+s2462
+i"PoiItem.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.h
+c000000004D022219000000000000040E
+t1291985433
+s1038
+i<UIKit/UIKit.h>
+i"PhysicalPlace.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.m
+c000000004D023316000000000000097B
+t1291989782
+s2427
+i"Radar.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.h
+c000000004D02221900000000000003EC
+t1291985433
+s1004
+i<UIKit/UIKit.h>
+i"Radar.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.m
+c000000004D022219000000000000072D
+t1291985433
+s1837
+i"RadarViewPortView.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.h
+c000000004D0191100000000000000433
+t1291948304
+s1075
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+i"JsonHandler.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.m
+c000000004D0191100000000000001048
+t1291948304
+s4168
+i"ListViewController.h"
+i"WebViewController.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebView.xib
+c000000004D022219000000000000278D
+t1291985433
+s10125
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.h
+c000000004D02221900000000000003D1
+t1291985433
+s977
+i<UIKit/UIKit.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.m
+c000000004D0222190000000000000AF5
+t1291985433
+s2805
+i"WebViewController.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib
+c000000004D06473E0000000000016245
+t1292257086
+s90693
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.h
+c000000004D0222190000000000000601
+t1291985433
+s1537
+i<Foundation/Foundation.h>
+i<MapKit/MapKit.h>
+i<CoreLocation/CoreLocation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.m
+c000000004D0222190000000000000C11
+t1291985433
+s3089
+i"MapViewController.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.h
+c000000004D0657F200000000000009D6
+t1292261362
+s2518
+i<UIKit/UIKit.h>
+i<CoreLocation/CoreLocation.h>
+i<CoreMotion/CoreMotion.h>
+i"ListViewController.h"
+i"AugmentedGeoViewController.h"
+i"JsonHandler.h"
+i"MapViewController.h"
+i"MarkerView.h"
+i"Radar.h"
+i"MoreViewController.h"
+i"SourceViewController.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.m
+c000000004D0761730000000000006853
+t1292329331
+s26707
+i"MixareAppDelegate.h"
+i"SourceViewController.h"
+i"JsonHandler.h"
+i"PhysicalPlace.h"
+i"DataSource.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.h
+c000000004D02221900000000000005A6
+t1291985433
+s1446
+i<UIKit/UIKit.h>
+i<CoreLocation/CoreLocation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.m
+c000000004D0222190000000000000D70
+t1291985433
+s3440
+i"MoreViewController.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.h
+c000000004D0222190000000000000455
+t1291985433
+s1109
+i<UIKit/UIKit.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.m
+c000000004D0222190000000000000568
+t1291985433
+s1384
+i"SourceTableCell.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.xib
+c000000004D06194D00000000000045C4
+t1292245325
+s17860
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.h
+c000000004D022219000000000000045F
+t1291985433
+s1119
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.m
+c000000004D064F500000000000001EAE
+t1292259152
+s7854
+i"SourceViewController.h"
+i"SourceTableCell.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.h
+c000000004D022219000000000000056A
+t1291985433
+s1386
+i<Foundation/Foundation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.m
+c000000004D0222190000000000000625
+t1291985433
+s1573
+i"DataSource.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/JSON.h
+c000000004D0222190000000000000A34
+t1291985433
+s2612
+i"SBJsonParser.h"
+i"SBJsonWriter.h"
+i"NSObject+SBJSON.h"
+i"NSString+SBJSON.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.h
+c000000004D022219000000000000085F
+t1291985433
+s2143
+i<Foundation/Foundation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.m
+c000000004D022219000000000000077D
+t1291985433
+s1917
+i"NSObject+SBJSON.h"
+i"SBJsonWriter.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.h
+c000000004D02221900000000000007F0
+t1291985433
+s2032
+i<Foundation/Foundation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.m
+c000000004D022219000000000000075D
+t1291985433
+s1885
+i"NSString+SBJSON.h"
+i"SBJsonParser.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.h
+c000000004D0222190000000000000B82
+t1291985433
+s2946
+i<Foundation/Foundation.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.m
+c000000004D0222190000000000000AC1
+t1291985433
+s2753
+i"SBJsonBase.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.h
+c000000004D0222190000000000000C8F
+t1291985433
+s3215
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.m
+c000000004D0222190000000000003B7A
+t1291985433
+s15226
+i"SBJsonParser.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.h
+c000000004D02221900000000000011D9
+t1291985433
+s4569
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.m
+c000000004D022219000000000000206D
+t1291985433
+s8301
+i"SBJsonWriter.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.h
+c000000004D0222190000000000000481
+t1291985433
+s1153
+i"JSON.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.m
+c000000004D02221900000000000014F3
+t1291985433
+s5363
+i"JsonHandler.h"
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Mixare_Prefix.pch
+c000000004D02221900000000000000B5
+t1291985433
+s181
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/Default.png
+c000000004D0629E10000000000005CFB
+t1292249569
+s23803
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/Default@2x.png
+c000000004D0629E1000000000000A876
+t1292249569
+s43126
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/English.lproj/Localizable.strings
+c000000004D0629E10000000000000778
+t1292249569
+s1912
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/German.lproj/Localizable.strings
+c000000004D0629E1000000000000079A
+t1292249569
+s1946
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/Italian.lproj/Localizable.strings
+c000000004D0629E1000000000000079E
+t1292249569
+s1950
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_datasource.png
+c000000004D0629E1000000000000113C
+t1292249569
+s4412
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_edit.png
+c000000004D0629E1000000000000067D
+t1292249569
+s1661
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_map.png
+c000000004D0629E10000000000001250
+t1292249569
+s4688
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_white.png
+c000000004D0629E10000000000000F48
+t1292249569
+s3912
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_white1.png
+c000000004D0629E10000000000000FD4
+t1292249569
+s4052
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/logo.png
+c000000004D0629E100000000000014B0
+t1292249569
+s5296
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/buzz_logo_small.png
+c000000004D0629E10000000000000F3F
+t1292249569
+s3903
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/logo_mixare_round.png
+c000000004D0629E100000000000014B0
+t1292249569
+s5296
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/twitter_logo_small.png
+c000000004D0629E10000000000000E01
+t1292249569
+s3585
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/wikipedia_logo_small.png
+c000000004D0629E10000000000000F58
+t1292249569
+s3928
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare-logo_114x114_72_dpi.png
+c000000004D0629E10000000000001CDE
+t1292249569
+s7390
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare-logo_57x57_72_dpi.png
+c000000004D0629E1000000000000149A
+t1292249569
+s5274
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare_512x512px.png
+c000000004D0629E10000000000006E4A
+t1292249569
+s28234
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/moreView/mixare_button.png
+c000000004D0629E10000000000002A8F
+t1292249569
+s10895
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/reality/circle.png
+c000000004D0629E100000000000017A8
+t1292249569
+s6056
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/buzz_logo.png
+c000000004D0629E10000000000001811
+t1292249569
+s6161
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/twitter_logo.png
+c000000004D0629E1000000000000144D
+t1292249569
+s5197
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/wikipedia_logo.png
+c000000004D0629E1000000000000B0E3
+t1292249569
+s45283
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/103-map.png
+c000000004D0629E100000000000001FB
+t1292249569
+s507
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/86-camera.png
+c000000004D0629E1000000000000015A
+t1292249569
+s346
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/list.png
+c000000004D0629E10000000000001181
+t1292249569
+s4481
+
+N/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/source.png
+c000000004D0629E10000000000001114
+t1292249569
+s4372
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app
+t1292329357
+s1190
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app.dSYM
+t1292329357
+s102
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/103-map.png
+t1292329353
+s507
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/86-camera.png
+t1292329353
+s346
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Default.png
+t1292329353
+s23803
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Default@2x.png
+t1292329353
+s43126
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/English.lproj/Localizable.strings
+t1292329353
+s251
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/German.lproj/Localizable.strings
+t1292329353
+s489
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Info.plist
+t1292329353
+s1292
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Italian.lproj/Localizable.strings
+t1292329353
+s461
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/MainWindow.nib
+t1292329354
+s8517
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare
+t1292329356
+s197100
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/PkgInfo
+t1292329353
+s8
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/SourceTableCell.nib
+t1292329354
+s1904
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/WebView.nib
+t1292329354
+s1598
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/buzz_logo.png
+t1292329354
+s6161
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/buzz_logo_small.png
+t1292329354
+s3903
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/circle.png
+t1292329354
+s6056
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/icon_datasource.png
+t1292329354
+s4412
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/icon_edit.png
+t1292329353
+s1661
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/icon_map.png
+t1292329353
+s4688
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/icon_white.png
+t1292329353
+s3912
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/icon_white1.png
+t1292329353
+s4052
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/list.png
+t1292329353
+s4481
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/logo.png
+t1292329353
+s5296
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/logo_mixare_round.png
+t1292329354
+s5296
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/mixare-logo_114x114_72_dpi.png
+t1292329353
+s7390
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/mixare-logo_57x57_72_dpi.png
+t1292329353
+s5274
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/mixare_512x512px.png
+t1292329353
+s28234
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/mixare_button.png
+t1292329354
+s10895
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/source.png
+t1292329353
+s4372
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/twitter_logo.png
+t1292329354
+s5197
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/twitter_logo_small.png
+t1292329354
+s3585
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/wikipedia_logo.png
+t1292329354
+s45283
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/wikipedia_logo_small.png
+t1292329354
+s3928
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedGeoViewController.o
+t1292329356
+s44416
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedViewController.o
+t1292329356
+s105272
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/DataSource.o
+t1292329355
+s8820
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/JsonHandler.o
+t1292329355
+s21864
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/ListViewController.o
+t1292329356
+s53908
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MapViewController.o
+t1292329356
+s55896
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MarkerView.o
+t1292329356
+s48032
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/Mixare.LinkFileList
+c000000004D0761890000000000000B9E
+t1292329353
+s2974
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MixareAppDelegate.o
+t1292329356
+s136208
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MoreViewController.o
+t1292329356
+s54500
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSObject+SBJSON.o
+t1292329355
+s7444
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSString+SBJSON.o
+t1292329355
+s7336
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PhysicalPlace.o
+t1292329356
+s14360
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PoiItem.o
+t1292329356
+s21080
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/Radar.o
+t1292329356
+s45436
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/RadarViewPortView.o
+t1292329356
+s42296
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonBase.o
+t1292329355
+s13264
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonParser.o
+t1292329356
+s36968
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonWriter.o
+t1292329355
+s26724
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceTableCell.o
+t1292329356
+s40664
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceViewController.o
+t1292329356
+s68284
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/WebViewController.o
+t1292329356
+s45428
+
+N/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/main.o
+t1292329355
+s6340
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000004CC127E80000000000074190
+t1287727080
+s475536
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h
+c000000004CC127DD00000000000001D0
+t1287727069
+s464
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CoreMotion.h
+c000000004CC127E900000000000001CB
+t1287727081
+s459
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.h
+c000000004CC1294D00000000000002FE
+t1287727437
+s766
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/MapKit.framework/MapKit
+c000000004CC12977000000000017E7F0
+t1287727479
+s1566704
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004CC1233C00000000000000C4
+t1287725884
+s196
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004CC12431000000000015CDB0
+t1287726129
+s1428912
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+c00000000000000000000000000000000
+t2
+s0
+
+N/var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch.gch
+t1292329355
+s15477968
+
+NMixare-Info.plist
+c000000004D060B2000000000000007CE
+t1292241696
+s1998
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies314022153#314022153#0(0"0(0#1#0"8645015360#0"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedGeoViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.455233
+e314022156.545787
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedGeoViewController.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.m314022156#314022156#0(0"0(0#0#87"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.m8649831104#2034"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedGeoViewController.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedGeoViewController.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.505219
+e314022156.714404
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedViewController.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.m314022156#314022156#0(0"0(0#0#84"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.m8622807104#2028"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/AugmentedViewController.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/AugmentedViewController.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/DataSource.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.615207
+e314022155.673109
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/DataSource.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.m314022155#314022155#0(0"0(0#0#69"/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.m8665177280#2000"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/DataSource.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/DataSource.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/JsonHandler.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.673193
+e314022155.805935
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/JsonHandler.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@78"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.m314022155#314022156#0(0"0(0#0#70"/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.m8663795488#2002"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JsonHandler.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/JsonHandler.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/ListViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.219947
+e314022156.323924
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/ListViewController.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.m314022156#314022156#0(0"0(0#0#77"/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.m8656325760#2016"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/ListViewController.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/ListViewController.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MapViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.269664
+e314022156.377198
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MapViewController.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.m314022156#314022156#0(0"0(0#0#75"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.m8639329216#2013"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Map/MapViewController.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MapViewController.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MarkerView.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.545875
+e314022156.615557
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MarkerView.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.m314022156#314022156#0(0"0(0#0#71"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.m8671160256#2002"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/MarkerView.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MarkerView.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MixareAppDelegate.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.998367
+e314022156.269575
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MixareAppDelegate.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.m314022155#314022156#0(0"0(0#0#71"/Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.m8656607840#2009"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/MixareAppDelegate.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MixareAppDelegate.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MoreViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.324012
+e314022156.455148
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MoreViewController.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.m314022156#314022156#0(0"0(0#0#77"/Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.m8635327936#2016"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/More/MoreViewController.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/MoreViewController.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSObject+SBJSON.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.674124
+e314022155.738633
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSObject+SBJSON.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@97"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.m314022155#314022156#0(0"0(0#0#89"/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.m8661084832#2025"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSObject+SBJSON.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSObject+SBJSON.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSString+SBJSON.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.738718
+e314022155.821407
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSString+SBJSON.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@97"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.m314022155#314022156#0(0"0(0#0#89"/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.m8657624224#2025"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/NSString+SBJSON.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/NSString+SBJSON.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PhysicalPlace.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.714753
+e314022156.841394
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PhysicalPlace.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.m314022156#314022156#0(0"0(0#0#74"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.m8664520832#2008"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PhysicalPlace.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PhysicalPlace.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PoiItem.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.811570
+e314022156.906203
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PoiItem.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.m314022156#314022156#0(0"0(0#0#68"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.m8657812544#1996"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/PoiItem.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/PoiItem.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/Radar.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.615641
+e314022156.701470
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/Radar.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.m314022156#314022156#0(0"0(0#0#72"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.m8665988512#1998"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/Radar.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/Radar.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/RadarViewPortView.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.701979
+e314022156.811485
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/RadarViewPortView.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.m314022156#314022156#0(0"0(0#0#84"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.m8665521888#2022"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Camera/Radar/RadarViewPortView.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/RadarViewPortView.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonBase.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.806025
+e314022155.908666
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonBase.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.m314022155#314022156#0(0"0(0#0#84"/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.m8656401824#2015"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonBase.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonBase.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonParser.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.821491
+e314022156.025301
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonParser.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.m314022155#314022156#0(0"0(0#0#86"/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.m8655841504#2019"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonParser.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonParser.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonWriter.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.908749
+e314022155.998273
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonWriter.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.m314022155#314022156#0(0"0(0#0#86"/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.m8664908160#2019"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/data/JSON_Framework/SBJsonWriter.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SBJsonWriter.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceTableCell.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.025385
+e314022156.118976
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceTableCell.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.m314022156#314022156#0(0"0(0#0#77"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.m8655853280#2013"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceTableCell.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.119055
+e314022156.219854
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceViewController.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.m314022156#314022156#0(0"0(0#0#82"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.m8664694720#2023"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceViewController.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/SourceViewController.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/WebViewController.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022156.377291
+e314022156.505125
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/WebViewController.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.m314022156#314022156#0(0"0(0#0#76"/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.m8655818464#2014"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebViewController.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/WebViewController.o"0#
+
+CCompileC build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/main.o "/Users/djorge/Desktop/mixsare-iphone subido/Classes/../main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.614283
+e314022155.674061
+r1
+xCompileC
+xbuild/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/main.o
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/../main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/djorge/Desktop/mixsare-iphone subido/Classes/../main.m314022155#314022155#0(0"0(0#0#61"/Users/djorge/Desktop/mixsare-iphone subido/Classes/../main.m8666086848#1986"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -include /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch -c "/Users/djorge/Desktop/mixsare-iphone subido/Classes/../main.m" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebView.xib"
+s314022154.575519
+e314022155.010986
+r1
+xCompileXIB
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebView.xib
+lSLF07#2@35"CompileXIB Classes/List/WebView.xib314022154#314022155#0(0"0(0#0#68"/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebView.xib8622998624#601"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/WebView.nib" "/Users/djorge/Desktop/mixsare-iphone subido/Classes/List/WebView.xib" --sdk /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib"
+s314022153.941062
+e314022154.899520
+r1
+xCompileXIB
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib
+o/* com.apple.ibtool.document.warnings */
+o/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib:241: warning: Tint color is only supported with bar style segmented controls.
+lSLF07#2@33"CompileXIB Classes/MainWindow.xib314022153#314022154#0(186"/* com.apple.ibtool.document.warnings *//Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib:241: warning: Tint color is only supported with bar style segmented controls.1(22@63"Tint color is only supported with bar style segmented controls.314022154#18446744073709551615#0#0(6@66"/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib313949886#241#0#241#0#0"0(0#0#66"/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib8656351680#602"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/MainWindow.nib" "/Users/djorge/Desktop/mixsare-iphone subido/Classes/MainWindow.xib" --sdk /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.xib"
+s314022154.021965
+e314022154.575433
+r1
+xCompileXIB
+x/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.xib
+lSLF07#2@46"CompileXIB Classes/Sources/SourceTableCell.xib314022154#314022154#0(0"0(0#0#79"/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.xib8663810976#620"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/SourceTableCell.nib" "/Users/djorge/Desktop/mixsare-iphone subido/Classes/Sources/SourceTableCell.xib" --sdk /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCopyStringsFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/English.lproj/Localizable.strings" Resources/English.lproj/Localizable.strings
+s314022153.848950
+e314022153.910736
+r1
+xCopyStringsFile
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/English.lproj/Localizable.strings
+xResources/English.lproj/Localizable.strings
+lSLF07#2@48"Copy Resources/English.lproj/Localizable.strings314022153#314022153#0(0"0(0#0#87"/Users/djorge/Desktop/mixsare-iphone subido/Resources/English.lproj/Localizable.strings8666602848#522"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv ICONV /usr/bin/iconv    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding binary Resources/English.lproj/Localizable.strings --outdir "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/English.lproj"0#
+
+CCopyStringsFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/German.lproj/Localizable.strings" Resources/German.lproj/Localizable.strings
+s314022153.849668
+e314022153.910863
+r1
+xCopyStringsFile
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/German.lproj/Localizable.strings
+xResources/German.lproj/Localizable.strings
+oResources/German.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-16
+lSLF07#2@47"Copy Resources/German.lproj/Localizable.strings314022153#314022153#0(144"Resources/German.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-160(0#0#86"/Users/djorge/Desktop/mixsare-iphone subido/Resources/German.lproj/Localizable.strings8666288992#519"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv ICONV /usr/bin/iconv    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary Resources/German.lproj/Localizable.strings --outdir "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/German.lproj"0#
+
+CCopyStringsFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Italian.lproj/Localizable.strings" Resources/Italian.lproj/Localizable.strings
+s314022153.910928
+e314022153.983509
+r1
+xCopyStringsFile
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Italian.lproj/Localizable.strings
+xResources/Italian.lproj/Localizable.strings
+oResources/Italian.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-16
+lSLF07#2@48"Copy Resources/Italian.lproj/Localizable.strings314022153#314022154#0(145"Resources/Italian.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-160(0#0#87"/Users/djorge/Desktop/mixsare-iphone subido/Resources/Italian.lproj/Localizable.strings8665746720#521"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv ICONV /usr/bin/iconv    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary Resources/Italian.lproj/Localizable.strings --outdir "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Italian.lproj"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/103-map.png Resources/tabBarIcons/103-map.png
+s314022153.983580
+e314022154.021460
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/103-map.png
+xResources/tabBarIcons/103-map.png
+lSLF07#2@38"Copy Resources/tabBarIcons/103-map.png314022153#314022154#0(0"0(0#0#77"/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/103-map.png8650137760#514"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/103-map.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/86-camera.png Resources/tabBarIcons/86-camera.png
+s314022153.984199
+e314022154.021565
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/86-camera.png
+xResources/tabBarIcons/86-camera.png
+lSLF07#2@40"Copy Resources/tabBarIcons/86-camera.png314022153#314022154#0(0"0(0#0#79"/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/86-camera.png8648859360#516"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/86-camera.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/Default.png Resources/Default.png
+s314022153.911698
+e314022153.934152
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/Default.png
+xResources/Default.png
+lSLF07#2@26"Copy Resources/Default.png314022153#314022153#0(0"0(0#0#65"/Users/djorge/Desktop/mixsare-iphone subido/Resources/Default.png8665521440#502"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/Default.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/Default@2x.png Resources/Default@2x.png
+s314022153.912220
+e314022153.934251
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/Default@2x.png
+xResources/Default@2x.png
+lSLF07#2@29"Copy Resources/Default@2x.png314022153#314022153#0(0"0(0#0#68"/Users/djorge/Desktop/mixsare-iphone subido/Resources/Default@2x.png8665103744#505"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/Default@2x.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/buzz_logo.png Resources/sources/buzz_logo.png
+s314022154.900963
+e314022154.917104
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/buzz_logo.png
+xResources/sources/buzz_logo.png
+lSLF07#2@36"Copy Resources/sources/buzz_logo.png314022154#314022154#0(0"0(0#0#75"/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/buzz_logo.png8620010144#512"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/buzz_logo.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/buzz_logo_small.png Resources/listView/buzz_logo_small.png
+s314022154.001604
+e314022154.021899
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/buzz_logo_small.png
+xResources/listView/buzz_logo_small.png
+lSLF07#2@43"Copy Resources/listView/buzz_logo_small.png314022154#314022154#0(0"0(0#0#82"/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/buzz_logo_small.png8639415392#519"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/buzz_logo_small.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/circle.png Resources/reality/circle.png
+s314022154.912364
+e314022154.923150
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/circle.png
+xResources/reality/circle.png
+lSLF07#2@33"Copy Resources/reality/circle.png314022154#314022154#0(0"0(0#0#72"/Users/djorge/Desktop/mixsare-iphone subido/Resources/reality/circle.png8612572480#509"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/reality/circle.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/icon_datasource.png Resources/icons/icon_datasource.png
+s314022153.995383
+e314022154.021818
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/icon_datasource.png
+xResources/icons/icon_datasource.png
+lSLF07#2@40"Copy Resources/icons/icon_datasource.png314022153#314022154#0(0"0(0#0#79"/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_datasource.png8641919520#516"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_datasource.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/icon_edit.png Resources/icons/icon_edit.png
+s314022153.912728
+e314022153.934338
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/icon_edit.png
+xResources/icons/icon_edit.png
+lSLF07#2@34"Copy Resources/icons/icon_edit.png314022153#314022153#0(0"0(0#0#73"/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_edit.png8664592960#510"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_edit.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/icon_map.png Resources/icons/icon_map.png
+s314022153.913237
+e314022153.934420
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/icon_map.png
+xResources/icons/icon_map.png
+lSLF07#2@33"Copy Resources/icons/icon_map.png314022153#314022153#0(0"0(0#0#72"/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_map.png8664161280#509"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_map.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/icon_white.png Resources/icons/icon_white.png
+s314022153.913766
+e314022153.934504
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/icon_white.png
+xResources/icons/icon_white.png
+lSLF07#2@35"Copy Resources/icons/icon_white.png314022153#314022153#0(0"0(0#0#74"/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_white.png8663741536#511"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_white.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/icon_white1.png Resources/icons/icon_white1.png
+s314022153.921526
+e314022153.942253
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/icon_white1.png
+xResources/icons/icon_white1.png
+lSLF07#2@36"Copy Resources/icons/icon_white1.png314022153#314022153#0(0"0(0#0#75"/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_white1.png8661999424#512"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/icon_white1.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/list.png Resources/tabBarIcons/list.png
+s314022153.984683
+e314022154.021653
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/list.png
+xResources/tabBarIcons/list.png
+lSLF07#2@35"Copy Resources/tabBarIcons/list.png314022153#314022154#0(0"0(0#0#74"/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/list.png8642337184#511"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/list.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/logo.png Resources/icons/logo.png
+s314022153.927217
+e314022153.942350
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/logo.png
+xResources/icons/logo.png
+lSLF07#2@29"Copy Resources/icons/logo.png314022153#314022153#0(0"0(0#0#68"/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/logo.png8661050048#505"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/icons/logo.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/logo_mixare_round.png Resources/listView/logo_mixare_round.png
+s314022154.899952
+e314022154.916983
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/logo_mixare_round.png
+xResources/listView/logo_mixare_round.png
+lSLF07#2@45"Copy Resources/listView/logo_mixare_round.png314022154#314022154#0(0"0(0#0#84"/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/logo_mixare_round.png8621628000#521"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/logo_mixare_round.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/mixare-logo_114x114_72_dpi.png Resources/mixare-logo_114x114_72_dpi.png
+s314022153.928066
+e314022153.942440
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/mixare-logo_114x114_72_dpi.png
+xResources/mixare-logo_114x114_72_dpi.png
+lSLF07#2@45"Copy Resources/mixare-logo_114x114_72_dpi.png314022153#314022153#0(0"0(0#0#84"/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare-logo_114x114_72_dpi.png8657835808#521"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare-logo_114x114_72_dpi.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/mixare-logo_57x57_72_dpi.png Resources/mixare-logo_57x57_72_dpi.png
+s314022153.931015
+e314022153.942527
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/mixare-logo_57x57_72_dpi.png
+xResources/mixare-logo_57x57_72_dpi.png
+lSLF07#2@43"Copy Resources/mixare-logo_57x57_72_dpi.png314022153#314022153#0(0"0(0#0#82"/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare-logo_57x57_72_dpi.png8656941600#519"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare-logo_57x57_72_dpi.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/mixare_512x512px.png Resources/mixare_512x512px.png
+s314022153.934565
+e314022153.948942
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/mixare_512x512px.png
+xResources/mixare_512x512px.png
+lSLF07#2@35"Copy Resources/mixare_512x512px.png314022153#314022153#0(0"0(0#0#74"/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare_512x512px.png8656736288#511"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/mixare_512x512px.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/mixare_button.png Resources/moreView/mixare_button.png
+s314022154.017435
+e314022154.027073
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/mixare_button.png
+xResources/moreView/mixare_button.png
+lSLF07#2@41"Copy Resources/moreView/mixare_button.png314022154#314022154#0(0"0(0#0#80"/Users/djorge/Desktop/mixsare-iphone subido/Resources/moreView/mixare_button.png8664699392#517"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/moreView/mixare_button.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/source.png Resources/tabBarIcons/source.png
+s314022153.988398
+e314022154.021737
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/source.png
+xResources/tabBarIcons/source.png
+lSLF07#2@37"Copy Resources/tabBarIcons/source.png314022153#314022154#0(0"0(0#0#76"/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/source.png8642004000#513"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/tabBarIcons/source.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/twitter_logo.png Resources/sources/twitter_logo.png
+s314022154.901719
+e314022154.921321
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/twitter_logo.png
+xResources/sources/twitter_logo.png
+lSLF07#2@39"Copy Resources/sources/twitter_logo.png314022154#314022154#0(0"0(0#0#78"/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/twitter_logo.png8619396256#515"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/twitter_logo.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/twitter_logo_small.png Resources/listView/twitter_logo_small.png
+s314022154.013766
+e314022154.023783
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/twitter_logo_small.png
+xResources/listView/twitter_logo_small.png
+lSLF07#2@46"Copy Resources/listView/twitter_logo_small.png314022154#314022154#0(0"0(0#0#85"/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/twitter_logo_small.png8666590816#522"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/twitter_logo_small.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/wikipedia_logo.png Resources/sources/wikipedia_logo.png
+s314022154.910432
+e314022154.921422
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/wikipedia_logo.png
+xResources/sources/wikipedia_logo.png
+lSLF07#2@41"Copy Resources/sources/wikipedia_logo.png314022154#314022154#0(0"0(0#0#80"/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/wikipedia_logo.png8618314208#517"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/sources/wikipedia_logo.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CCpResource build/Debug-iphonesimulator/Mixare.app/wikipedia_logo_small.png Resources/listView/wikipedia_logo_small.png
+s314022154.015618
+e314022154.023883
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Mixare.app/wikipedia_logo_small.png
+xResources/listView/wikipedia_logo_small.png
+lSLF07#2@48"Copy Resources/listView/wikipedia_logo_small.png314022154#314022154#0(0"0(0#0#87"/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/wikipedia_logo_small.png8665618400#524"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/djorge/Desktop/mixsare-iphone subido/Resources/listView/wikipedia_logo_small.png" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+
+CGenerateDSYMFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app.dSYM" "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare"
+s314022157.008502
+e314022157.071201
+r1
+xGenerateDSYMFile
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app.dSYM
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare
+lSLF07#2@106"GenerateDSYMFile build/Debug-iphonesimulator/Mixare.app.dSYM build/Debug-iphonesimulator/Mixare.app/Mixare314022157#314022157#0(0"0(0#0#89"/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare8665414848#404"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/usr/bin/dsymutil "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare" -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app.dSYM"0#
+
+CLd "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare" normal i386
+s314022156.906280
+e314022157.008413
+r1
+xLd
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare
+xnormal
+xi386
+lSLF07#2@94"Link /Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare314022156#314022157#0(0"0(0#0#0"8673297312#1020"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk "-L/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" -filelist "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Objects-normal/i386/Mixare.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework QuartzCore -framework CoreMotion -framework MapKit -framework CoreLocation -framework Foundation -framework UIKit -framework CoreGraphics -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Mixare"0#
+
+CProcessInfoPlistFile "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Info.plist" Mixare-Info.plist
+s314022153.831078
+e314022153.848871
+r1
+xProcessInfoPlistFile
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Info.plist
+xMixare-Info.plist
+lSLF07#2@25"Process Mixare-Info.plist314022153#314022153#0(0"0(0#0#61"/Users/djorge/Desktop/mixsare-iphone subido/Mixare-Info.plist8625689344#499"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Mixare-Info.plist -genpkginfo "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app/Info.plist"0#
+
+CProcessPCH /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch.gch Mixare_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s314022155.011092
+e314022155.614113
+r1
+xProcessPCH
+x/var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch.gch
+xMixare_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@28"Precompile Mixare_Prefix.pch314022155#314022155#0(0"0(0#0#61"/Users/djorge/Desktop/mixsare-iphone subido/Mixare_Prefix.pch8610852032#1861"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30100 -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-generated-files.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/Mixare-project-headers.hmap" "-F/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/include" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources/i386" "-I/Users/djorge/Desktop/mixsare-iphone subido/build/Mixare.build/Debug-iphonesimulator/Mixare.build/DerivedSources" -c "/Users/djorge/Desktop/mixsare-iphone subido/Mixare_Prefix.pch" -o /var/folders/C-/C-piCBwvFkyPuXXPVFIAxE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-ccfcbllxbwiujrgxoddybuszzhka/Mixare_Prefix.pch.gch0#
+
+CTouch "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"
+s314022157.071270
+e314022157.075286
+r1
+xTouch
+x/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app
+lSLF07#2@88"Touch /Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app314022157#314022157#0(0"0(0#0#0"8606250560#293"    cd "/Users/djorge/Desktop/mixsare-iphone subido"    setenv PATH "/Xcode3.2.5/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.5/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/djorge/Desktop/mixsare-iphone subido/build/Debug-iphonesimulator/Mixare.app"0#
+

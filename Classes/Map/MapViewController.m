@@ -63,9 +63,9 @@
 }
 
 -(void) mapDataToMapAnnotations{
-	if(_data != nil){
+	if(self.data != nil){
 		MapAnnotation * tmpPlace;
-		for(NSDictionary * poi in _data){
+		for(NSDictionary * poi in self.data){
 			tmpPlace = [[MapAnnotation alloc]init];
 			tmpPlace.title = [poi valueForKey:@"title"];
 			tmpPlace.subTitle = [poi valueForKey:@"sum"];
