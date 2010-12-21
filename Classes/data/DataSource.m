@@ -20,7 +20,7 @@
 
 @implementation DataSource
 +(NSString *) createRequestURLFromDataSource: (NSString*) source Lat: (float) lat Lon: (float) lon Alt: (float) alt radius: (float) rad Lang: (NSString *) lang{
-	NSString * ret;
+	NSString *ret;
 	if([source isEqualToString: @"WIKIPEDIA"] ){
 		ret = [NSString stringWithFormat:@"%@?lat=%f&lng=%f&radius=%f&maxRows=50&lang=%@",WIKI_BASE_URL,lat,lon,rad,lang];
 	}else if ([source isEqualToString: @"BUZZ"]){
@@ -33,6 +33,8 @@
 	}else if ([source isEqualToString: @"OWNURL"]){
 		
 	}
+	
+	NSLog(@"Downloading data from %@", ret); /* DEBUG LOG */
 	return ret;
 }
 @end

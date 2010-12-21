@@ -20,8 +20,20 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define VIEWPORT_WIDTH_RADIANS 0.5
-#define VIEWPORT_HEIGHT_RADIANS .7392
+#define VIEWPORT_HEIGHT_RADIANS 0.7392
 
+@interface UIViewController(OrientationPatch)
+-(UIDeviceOrientation)interfaceOrientation;
+@end
+
+@implementation UIViewController(OrientationPatch)
+
+-(UIDeviceOrientation)interfaceOrientation
+{
+	return [[UIDevice currentDevice] orientation];
+}
+
+@end
 
 // Private methods and properties
 @interface AugmentedViewController()
@@ -33,18 +45,27 @@
 
 @implementation AugmentedViewController
 
+// To filter the little movements of the accelerometer
+const float kFilteringFactor = 0.05f;
+
 // -----------------------------------------------------------------------------
 
 @synthesize cameraController = _cameraController;
 @synthesize radarView = _radarView;
 @synthesize radarScopeView = _radarScopeView;
 @synthesize ARViewDelegate = _ARViewdelegate;
+
 @synthesize locationDelegate = _locationDelegate;
 @synthesize accelerometerDelegate = _accelerometerDelegate;
-@synthesize locationManager = _locationManager;
 @synthesize accelerometerManager = _accelerometerManager;
+@synthesize updateTimer = _updateTimer;
+
 @synthesize debugMode = _debugMode;
 @synthesize lblDebug = _lblDebug;
+@synthesize centerLocation = _centerLocation;
+@synthesize poisCoordinates = _poisCoordinates;
+@synthesize poisViews = _poisViews;
+@synthesize overlayView = _overlayView;
 
 //IBOutlets
 @synthesize radiusSlider = _radiusSlider;
@@ -60,34 +81,27 @@
 @synthesize minimumScaleFactor, maximumRotationAngle;
 
 @synthesize updateFrequency;
-@synthesize coordinates = ar_coordinates;
 
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-	if (self) {
-		ar_coordinates = [[NSMutableArray alloc] init];
-		ar_coordinateViews = [[NSMutableArray alloc] init];
-		
-		self.updateFrequency = 1 / 20.0;	
-		self.scaleViewsBasedOnDistance = NO;
-		self.maximumScaleDistance = 0.0;
-		self.minimumScaleFactor = 1.5;
-		
-		self.rotateViewsBasedOnPerspective = YES;
-		self.maximumRotationAngle = M_PI / 6.0;
-		
-		self.wantsFullScreenLayout = NO;
-	}
-	return self;
-}
+#pragma mark -
+#pragma mark Creation and destruction methods
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+		
+	self.poisCoordinates = [[[NSMutableArray alloc] init] autorelease];
+	self.poisViews = [[[NSMutableArray alloc] init] autorelease];
 	
-	[ar_overlayView release];
-	ar_overlayView = [[UIView alloc] initWithFrame:CGRectZero];
+	self.updateFrequency = 1 / 20.0;	
+	self.scaleViewsBasedOnDistance = YES;
+	self.maximumScaleDistance = 0.0;
+	self.minimumScaleFactor = 0.6;
+	
+	self.rotateViewsBasedOnPerspective = YES;
+	self.maximumRotationAngle = M_PI / 6.0;
+	
+	self.wantsFullScreenLayout = NO;
+	
 	
 #if !TARGET_IPHONE_SIMULATOR	
 	self.cameraController = [[[UIImagePickerController alloc] init] autorelease];
@@ -98,7 +112,7 @@
 	self.cameraController.showsCameraControls = NO;
 	self.cameraController.navigationBarHidden = YES;
 #endif
-		
+			
     float radius = [[NSUserDefaults standardUserDefaults] floatForKey:@"radius"];
     if (radius <= 0 || radius > 100){
         self.radiusSlider.value = 5.0;
@@ -108,38 +122,26 @@
         NSLog(@"RADIUS VALUE: %f", radius);
         self.lblCurrentDistance.text= [NSString stringWithFormat:@"%.2f km",radius];
     }
-	
-	self.scaleViewsBasedOnDistance = YES;
-	self.minimumScaleFactor = 0.6;
-	self.rotateViewsBasedOnPerspective = YES;
-						
+				
 	if (self.debugMode) {
-		self.lblDebug = [[[UILabel alloc] initWithFrame:CGRectMake(0,
-																   ar_overlayView.frame.size.height - _lblDebug.frame.size.height,
-																   ar_overlayView.frame.size.width,
-																   _lblDebug.frame.size.height)] autorelease];
-		self.lblDebug.textAlignment = UITextAlignmentCenter;
-		self.lblDebug.text = @"Waiting...";
-		[self.lblDebug sizeToFit];
-		[ar_overlayView addSubview:self.lblDebug];
+		self.lblDebug.hidden = NO;
 	}
 	
-	[self.view addSubview:ar_overlayView];	
+//	self.overlayView = [[[UIView alloc] initWithFrame:self.cameraController.view.bounds] autorelease];	
+//	[self.view addSubview:self.overlayView];	
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];	
-	[self showLoadingView];
+	[self showLoadingViewOnMainThread];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	
 #if !TARGET_IPHONE_SIMULATOR
-//	[ar_overlayView setFrame:self.cameraController.view.bounds];
-//	[ar_overlayView setFrame:self.cameraController.view.bounds];
-//	[self.view setFrame:self.cameraController.view.bounds];
 	[self.cameraController setCameraOverlayView:self.view];
+	[[[UIApplication sharedApplication] keyWindow] setRootViewController:self.cameraController];	
 	[self presentModalViewController:self.cameraController animated:NO];	
 #endif
 	
@@ -156,39 +158,63 @@
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-	
 	// Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-	[ar_overlayView release];
-	ar_overlayView = nil;
-	
-	
+	// e.g. self.myOutlet = nil;	
 	self.radiusSlider = nil;
 	self.radarView = nil;
 	self.radarScopeView = nil;
 	self.lblCurrentDistance = nil;
+	self.lblDebug = nil;
 }
 
 
 - (void)dealloc {
-	[_lblDebug release];
-	[ar_coordinateViews release];
-	[ar_coordinates release];
-	
-// -----------------------------------------------------------------------------
+	[_centerLocation release];
+	[_poisViews release];
+	[_poisCoordinates release];
+	[_overlayView release];
 	
 	[_radiusSlider release];
 	[_radarView release];
 	[_radarScopeView release];
 	[_lblCurrentDistance release];
-	[_locationManager release];
+	[_lblDebug release];
 	
     [super dealloc];
 }
+
+#pragma mark -
+#pragma mark Rotating methods
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	NSLog(@"shouldAutorotateToInterfaceOrientation %d", interfaceOrientation); /* DEBUG LOG */
+	return YES;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	NSLog(@"willRotateToInterfaceOrientation %d", toInterfaceOrientation); /* DEBUG LOG */	
+	
+	UIView *viewObject = self.view;
+	if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+		[viewObject setCenter:CGPointMake(160, 240)];
+		CGAffineTransform cgCTM = CGAffineTransformMakeRotation(M_PI * 0.5);
+		viewObject.transform = cgCTM;
+		viewObject.bounds = CGRectMake(0, 0, 480, 320);		
+	} else if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
+		[viewObject setCenter:CGPointMake(160, 240)];
+		CGAffineTransform tr = viewObject.transform; // get current transform (portrait)
+		tr = CGAffineTransformRotate(tr, - (M_PI / 2.0)); // rotate -90 degrees to go portrait
+		viewObject.transform = tr; // set current transform 
+		viewObject.bounds = CGRectMake(0, 0, 320, 480);
+	}
+}
+
+#pragma mark -
+#pragma mark Properties methods
 
 - (void)closeCameraView{
 	[self.cameraController.view removeFromSuperview];
@@ -213,20 +239,11 @@
 }
 
 - (void)setDebugMode:(BOOL)flag {
-	if (_debugMode == flag)
-		return;
-	
-	_debugMode = flag;
-	
-	//we don't need to update the view.
-	if (![self isViewLoaded])
-		return;
-	
-	if (_debugMode)
-		[ar_overlayView addSubview:self.lblDebug];
-	else
-		[self.lblDebug removeFromSuperview];
+	self.lblDebug.hidden = !_debugMode;
 }
+
+#pragma mark -
+#pragma mark Viewport drawing pois in view methods
 
 - (BOOL)viewportContainsCoordinate:(PoiItem *)coordinate {
 	double centerAzimuth = self.centerCoordinate.azimuth;
@@ -244,7 +261,7 @@
 	
 	BOOL result = (coordinate.azimuth > leftAzimuth && coordinate.azimuth < rightAzimuth);
 	
-	if(leftAzimuth > rightAzimuth) {
+	if (leftAzimuth > rightAzimuth) {
 		result = (coordinate.azimuth < rightAzimuth || coordinate.azimuth > leftAzimuth);
 	}
 	
@@ -254,15 +271,11 @@
 	
 	//check the height.
 	result = result && (coordinate.inclination > bottomInclination && coordinate.inclination < topInclination);
-	
-	//NSLog(@"coordinate: %@ result: %@", coordinate, result?@"YES":@"NO");
-	
+		
+//	if (result)
+//		NSLog(@"showing POI: %@", [coordinate description]); /* DEBUG LOG */
+		
 	return result;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	NSLog(@"shouldAutorotateToInterfaceOrientation %d", interfaceOrientation); /* DEBUG LOG */
-	return YES;
 }
 
 - (CGPoint)pointInView:(MarkerView *)realityView forCoordinate:(PoiItem *)coordinate {
@@ -294,50 +307,14 @@
 	double topInclination = self.centerCoordinate.inclination - VIEWPORT_HEIGHT_RADIANS / 2.0;
 	
 	point.y = realityView.frame.size.height - ((pointInclination - topInclination) / VIEWPORT_HEIGHT_RADIANS) * realityView.frame.size.height;
-    
+	
 	return point;
 }
 
--(CGPoint) rotatePointAboutOrigin:(CGPoint) point angle: (float) angle{
+-(CGPoint)rotatePointAboutOrigin:(CGPoint) point angle: (float) angle{
     float s = sinf(angle);
     float c = cosf(angle);
     return CGPointMake(c * point.x - s * point.y, s * point.x + c * point.y);
-}
-
-
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
-	const float kFilteringFactor = 0.05f;
-	UIAccelerationValue rollingX, rollingZ;
-
-	// -1 face down.
-	// 1 face up.
-	
-	//update the center coordinate.
-	
-	//NSLog(@"x: %f y: %f z: %f", acceleration.x, acceleration.y, acceleration.z);
-	
-	//this should be different based on orientation.
-	if([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
-        rollingZ  = (acceleration.z * kFilteringFactor) + (rollingZ  * (1.0 - kFilteringFactor));
-        rollingX = (acceleration.x * kFilteringFactor) + (rollingX * (1.0 - kFilteringFactor));
-    }else{
-        rollingZ  = (acceleration.z * kFilteringFactor) + (rollingZ  * (1.0 - kFilteringFactor));
-        rollingX = (acceleration.y * kFilteringFactor) + (rollingX * (1.0 - kFilteringFactor));
-	}
-	if (rollingZ > 0.0) {
-		self.centerCoordinate.inclination = atan(rollingX / rollingZ) + M_PI / 2.0;
-	} else if (rollingZ < 0.0) {
-		self.centerCoordinate.inclination = atan(rollingX / rollingZ) - M_PI / 2.0;// + M_PI;
-	} else if (rollingX < 0) {
-		self.centerCoordinate.inclination = M_PI/2.0;
-	} else if (rollingX >= 0) {
-		self.centerCoordinate.inclination = 3 * M_PI/2.0;
-	}
-	
-	if (self.accelerometerDelegate && [self.accelerometerDelegate respondsToSelector:@selector(accelerometer:didAccelerate:)]) {
-		//forward the acceleromter.
-		[self.accelerometerDelegate accelerometer:accelerometer didAccelerate:acceleration];
-	}
 }
 
 NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *ignore) {
@@ -350,45 +327,69 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 	}
 }
 
+#pragma mark -
+#pragma mark POIs management
+
 - (void)addCoordinate:(PoiItem *)coordinate animated:(BOOL)animated {
 	//do some kind of animation?
-	[ar_coordinates addObject:coordinate];
+	[self.poisCoordinates addObject:coordinate];
 	
 	if (coordinate.radialDistance > self.maximumScaleDistance) {
 		self.maximumScaleDistance = coordinate.radialDistance;
 	}
 	
 	//message the delegate.
-	[ar_coordinateViews addObject:[self.ARViewDelegate viewForCoordinate:coordinate]];
+	[self.poisViews addObject:[self.ARViewDelegate viewForCoordinate:coordinate]];
 }
 
 - (void)removeCoordinates:(NSMutableArray *)coordinates {	
-	[ar_coordinates removeAllObjects];
-	[ar_coordinateViews removeAllObjects];
-    for (UIView * view in ar_overlayView.subviews){
+	[self.poisCoordinates removeAllObjects];
+	[self.poisViews removeAllObjects];
+    for (UIView *view in self.overlayView.subviews){
         [view removeFromSuperview];
     }
 }
 
+- (void)recalculateDataWithNewLocation:(CLLocation *)newLocation {
+	NSLog(@"Recalculating Data with New Location"); /* DEBUG LOG */
+	self.centerLocation = newLocation;
+	
+	for (PhysicalPlace *geoLocation in self.poisCoordinates) {
+		if ([geoLocation isKindOfClass:[PhysicalPlace class]]) {
+			[geoLocation calibrateUsingOrigin:self.centerLocation];
+			
+			if (geoLocation.radialDistance > self.maximumScaleDistance) {
+				self.maximumScaleDistance = geoLocation.radialDistance;
+			}
+		}
+	}
+}
+
 - (void)updateLocations:(NSTimer *)timer {
 	//update locations!
-	
-	if (!ar_coordinateViews || ar_coordinateViews.count == 0) {
+	if (!self.poisViews || self.poisViews.count == 0)
 		return;
-	}
 	
-	_lblDebug.text = [self.centerCoordinate description];
+	self.lblDebug.text = [self.centerCoordinate description];
 	
 	int index = 0;
-    NSMutableArray * radarPointValues= [[NSMutableArray alloc]initWithCapacity:[ar_coordinates count]];
-    
-	for (PoiItem *item in ar_coordinates) {
+    NSMutableArray * radarPointValues= [[NSMutableArray alloc]initWithCapacity:[self.poisCoordinates count]];
+
+
+	BOOL test = YES;
+
+	for (PoiItem *item in self.poisCoordinates) {
 		
-		MarkerView *viewToDraw = [ar_coordinateViews objectAtIndex:index];
+		MarkerView *viewToDraw = [self.poisViews objectAtIndex:index];
 		
 		if ([self viewportContainsCoordinate:item]) {
 			
-			CGPoint loc = [self pointInView:ar_overlayView forCoordinate:item];
+			CGPoint loc = [self pointInView:self.overlayView forCoordinate:item];
+			if (test) {
+				test = NO;
+				NSLog(@"Punto de la vista (%.f,%.f), My Azimuth %f", loc.x, loc.y, self.centerCoordinate.azimuth); /* DEBUG LOG */
+			}
+			
 			CGFloat scaleFactor = 1.5;
 			if (self.scaleViewsBasedOnDistance) {
 				scaleFactor = 1.0 - self.minimumScaleFactor * (item.radialDistance / self.maximumScaleDistance);
@@ -423,20 +424,20 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 			
 			//if we don't have a superview, set it up.
 			if (!(viewToDraw.superview)) {
-				[ar_overlayView addSubview:viewToDraw];
-				[ar_overlayView sendSubviewToBack:viewToDraw];
+				[self.overlayView addSubview:viewToDraw];
+				[self.overlayView sendSubviewToBack:viewToDraw];
 			}
 		} else {
 			[viewToDraw removeFromSuperview];
 			viewToDraw.transform = CGAffineTransformIdentity;
 		}
-        CGPoint loc = [self pointInView:ar_overlayView forCoordinate:item];
+        CGPoint loc = [self pointInView:self.overlayView forCoordinate:item];
         item.radarPos = loc;
-		//        if( fmod((locationManager.heading.trueHeading+item.azimuth),360)==0){
-		//            item.azimuth= locationManager.heading.trueHeading+item.azimuth;
-		//        }else{
-		//            item.azimuth=fmod((locationManager.heading.trueHeading+item.azimuth),360);
-		//        }
+//        if( fmod((locationManager.heading.trueHeading+item.azimuth),360)==0){
+//            item.azimuth= locationManager.heading.trueHeading+item.azimuth;
+//        }else{
+//            item.azimuth=fmod((locationManager.heading.trueHeading+item.azimuth),360);
+//        }
         [radarPointValues addObject:item];
 		index++;
 	}
@@ -451,81 +452,39 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
     self.radarView.radius = radius;
     [self.radarView setNeedsDisplay];
 	
-	[radarPointValues release];
+	[radarPointValues release];	
 }
 
 #pragma mark -
 #pragma mark locationManager delegates and methods
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+//	NSLog(@"Augmented View Controller True Heading %.f", newHeading.trueHeading); /* DEBUG LOG */
+	
 	self.centerCoordinate.azimuth = fmod(newHeading.magneticHeading, 360.0) * (2 * (M_PI / 360.0));
     if([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
-        if(self.centerCoordinate.azimuth <(3*M_PI/2)){
+        if(self.centerCoordinate.azimuth < (3*M_PI/2))
             self.centerCoordinate.azimuth += (M_PI/2);
-        }else{
+        else
             self.centerCoordinate.azimuth = fmod(self.centerCoordinate.azimuth + (M_PI/2),360);
-            
-        }
-        
     }
+	
     int gradToRotate = newHeading.trueHeading-90-22.5;
-    if([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
+    if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
         gradToRotate+= 90;
     }
-    if(gradToRotate < 0){
+    if (gradToRotate < 0){
         gradToRotate= 360 + gradToRotate;
     }
 	self.radarScopeView.referenceAngle = gradToRotate;
     [self.radarScopeView setNeedsDisplay];
-	
-    oldHeading = newHeading.trueHeading;
-	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManager:didUpdateHeading:)]) {
-		//forward the call.
-		[self.locationDelegate locationManager:manager didUpdateHeading:newHeading];
-	}
 }
 
-- (BOOL)locationManagerShouldDisplayHeadingCalibration:(CLLocationManager *)manager {
-	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManagerShouldDisplayHeadingCalibration:)]) {
-		//forward the call.
-		return [self.locationDelegate locationManagerShouldDisplayHeadingCalibration:manager];
-	}
-	
-	return YES;
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
-		//forward the call.
-		[self.locationDelegate locationManager:manager didUpdateToLocation:newLocation fromLocation:oldLocation];
-	}
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManager:didFailWithError:)]) {
-		//forward the call.
-		return [self.locationDelegate locationManager:manager didFailWithError:error];
-	}
-}
-
-- (void)setAsLocationManagerController:(CLLocationManager *)manager withDelegate:(id<CLLocationManagerDelegate>)delegate {
-	self.locationManager = manager;
-	self.locationManager.delegate = self;
-	self.locationDelegate = delegate;
-	[self startListening];	
-}
-
--(void)stopListening{
-	if (self.locationManager != nil){
-		[self.locationManager stopUpdatingHeading];
-	}
-}
-
-- (void)startListening {
+- (void)startListening:(CLLocationManager *)locationManager {
 	//we want every move.
-	self.locationManager.headingFilter = kCLHeadingFilterNone;
-	self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-	[self.locationManager startUpdatingHeading];
+	locationManager.headingFilter = kCLHeadingFilterNone;
+	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	[locationManager startUpdatingHeading];
 	
 	if (self.accelerometerManager == nil) {
 		self.accelerometerManager = [UIAccelerometer sharedAccelerometer];
@@ -538,6 +497,42 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 	}
 }
 
+- (void)stopListening:(CLLocationManager *)locationManager {
+	[locationManager stopUpdatingHeading];
+}
+
+#pragma mark -
+#pragma mark Accelerometer delegate
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+	static UIAccelerationValue rollingX, rollingZ;
+	// -1 face down 1 face up.
+	//update the center coordinate.
+		
+	//this should be different based on orientation.
+	if([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
+        rollingZ  = (acceleration.z * kFilteringFactor) + (rollingZ  * (1.0 - kFilteringFactor));
+        rollingX = (acceleration.x * kFilteringFactor) + (rollingX * (1.0 - kFilteringFactor));
+    }else{
+        rollingZ  = (acceleration.z * kFilteringFactor) + (rollingZ  * (1.0 - kFilteringFactor));
+        rollingX = (acceleration.y * kFilteringFactor) + (rollingX * (1.0 - kFilteringFactor));
+	}
+	if (rollingZ > 0.0) {
+		self.centerCoordinate.inclination = atan(rollingX / rollingZ) + M_PI / 2.0;
+	} else if (rollingZ < 0.0) {
+		self.centerCoordinate.inclination = atan(rollingX / rollingZ) - M_PI / 2.0;// + M_PI;
+	} else if (rollingX < 0) {
+		self.centerCoordinate.inclination = M_PI/2.0;
+	} else if (rollingX >= 0) {
+		self.centerCoordinate.inclination = 3 * M_PI/2.0;
+	}
+	
+	if (self.accelerometerDelegate && [self.accelerometerDelegate respondsToSelector:@selector(accelerometer:didAccelerate:)]) {
+		//forward the acceleromter.
+		[self.accelerometerDelegate accelerometer:accelerometer didAccelerate:acceleration];
+	}
+}
+
 #pragma mark -
 #pragma mark controls methods
 
@@ -547,20 +542,34 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 
 - (IBAction)radiusSliderChanged:(UISlider*)slider {
 	self.lblCurrentDistance.text= [NSString stringWithFormat:@"%.2f km",slider.value];
-	[self showLoadingView];
-	
-	[self.ARViewDelegate sliderValueChanged:slider];
+}
+
+- (IBAction)radiusSliderTouchUp:(UISlider*)slider {
+	[self showLoadingViewOnMainThread];
+	[self performSelector:@selector(sliderValueChanged:) withObject:slider];
+}
+
+- (void)sliderValueChanged:(UISlider*)slider {
+	[self.ARViewDelegate sliderValueChanged:slider];	
 }
 
 #pragma mark -
 #pragma mark loading view
 
 - (void)showLoadingView {
-	self.notificationView.hidden = NO;
+	self.notificationView.hidden = NO;	
 }
 
 - (void)hideLoadingView {
-	self.notificationView.hidden = YES;
+	self.notificationView.hidden = YES;	
+}
+
+- (void)showLoadingViewOnMainThread {
+	[self performSelectorOnMainThread:@selector(showLoadingView) withObject:nil waitUntilDone:YES];
+}
+
+- (void)hideLoadingViewOnMainThread {
+	[self performSelectorOnMainThread:@selector(hideLoadingView) withObject:nil waitUntilDone:YES];
 }
 
 @end

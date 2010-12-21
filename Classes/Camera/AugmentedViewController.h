@@ -45,44 +45,44 @@
 @private
 	
 	BOOL _debugMode;
-	int oldHeading;
 	NSTimer *_updateTimer;
-	
-	MarkerView *ar_overlayView;
-	
-	NSMutableArray *ar_coordinates;
-	NSMutableArray *ar_coordinateViews;
-
+		
 // -----------------------------------------------------------------------------
 	UIImagePickerController *_cameraController;
 	RadarView *_radarView;
     RadarScopeView * _radarScopeView;
-	CLLocationManager *_locationManager;
 	UIAccelerometer *_accelerometerManager;
 	PoiItem *_centerCoordinate;
-	UILabel *_lblDebug;
+	CLLocation *_centerLocation;	
 
 	id<ARViewDelegate> _ARViewdelegate;
-	id<CLLocationManagerDelegate> _locationDelegate;
 	id<UIAccelerometerDelegate> _accelerometerDelegate;
+	id<CLLocationManagerDelegate> _locationDelegate;	
 	
-
+	NSMutableArray *_poisCoordinates;
+	NSMutableArray *_poisViews;
+	MarkerView *_overlayView;
+	
 	//IBOutlets
 	UISlider* _radiusSlider;	
 	UILabel* _lblCurrentDistance;	
     UIView *_notificationView;	
+	UILabel *_lblDebug;
 }
 
 @property (nonatomic) BOOL debugMode;
-@property (nonatomic, retain) UILabel *lblDebug;
 
-@property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, retain) UIAccelerometer *accelerometerManager;
 @property (nonatomic, retain) PoiItem *centerCoordinate;
+@property (nonatomic, retain) CLLocation *centerLocation;
+
+@property (nonatomic, retain) NSMutableArray *poisCoordinates;
+@property (nonatomic, retain) NSMutableArray *poisViews;
+@property (nonatomic, retain) NSTimer *updateTimer;
 
 @property (nonatomic, assign) id<ARViewDelegate> ARViewDelegate;
-@property (nonatomic, assign) id<CLLocationManagerDelegate> locationDelegate;
 @property (nonatomic, assign) id<UIAccelerometerDelegate> accelerometerDelegate;
+@property (nonatomic, assign) id<CLLocationManagerDelegate> locationDelegate;
 
 //IBOutlets
 @property (nonatomic, retain) IBOutlet UISlider *radiusSlider;
@@ -90,21 +90,22 @@
 @property (nonatomic, retain) IBOutlet RadarScopeView* radarScopeView;
 @property (nonatomic, retain) IBOutlet UILabel* lblCurrentDistance;
 @property (nonatomic, retain) IBOutlet UIView *notificationView;
+@property (nonatomic, retain) IBOutlet UILabel *lblDebug;
+
+@property (nonatomic, retain) IBOutlet MarkerView *overlayView;
 
 //IBActions
-- (IBAction)radiusSliderChanged:(UISlider*) slider;
+- (IBAction)radiusSliderChanged:(UISlider*)slider;
 - (IBAction)closeButtonPressed;
+- (IBAction)radiusSliderTouchUp:(UISlider*)slider;
 
 //Public methods
 - (void)closeCameraView;
-- (void)showLoadingView;
-- (void)hideLoadingView;
-- (void)setAsLocationManagerController:(CLLocationManager *)manager withDelegate:(id<CLLocationManagerDelegate>)delegate;
+- (void)showLoadingViewOnMainThread;
+- (void)hideLoadingViewOnMainThread;
 
 
 // -----------------------------------------------------------------------------
-
-@property (readonly) NSArray *coordinates;
 
 @property BOOL scaleViewsBasedOnDistance;
 @property double maximumScaleDistance;
@@ -122,12 +123,13 @@
 
 - (CGPoint)rotatePointAboutOrigin:(CGPoint) point angle:(float) angle;
 
-- (void)startListening;
-- (void)stopListening;
+- (void)startListening:(CLLocationManager *)locationManager;
+- (void)stopListening:(CLLocationManager *)locationManager;
 - (void)updateLocations:(NSTimer *)timer;
 - (CGPoint)pointInView:(UIView *)realityView forCoordinate:(PoiItem *)coordinate;
 
 - (BOOL)viewportContainsCoordinate:(PoiItem *)coordinate;
+- (void)recalculateDataWithNewLocation:(CLLocation *)newLocation;
 
 
 @end

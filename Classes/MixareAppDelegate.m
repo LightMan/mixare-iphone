@@ -36,8 +36,10 @@ const int kListTabBarIndex = 2;
 const int kMapTabBarIndex = 3;
 const int kMoreTabBarIndex = 4;
 
-@synthesize mainLocationManager = _mainLocationManager;
+const float kDefaultRadius = 5.0f;
 
+@synthesize mainLocationManager = _mainLocationManager;
+@synthesize locationDelegate = _locationDelegate;
 
 @synthesize poisData = _poisData;
 @synthesize sourceViewController = _sourceViewController;
@@ -64,6 +66,9 @@ const int kMoreTabBarIndex = 4;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    		
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	_radius = [defaults floatForKey:@"radius"];
+	//No radius set
+	if (_radius == 0.0) 
+		_radius = kDefaultRadius;
  	
 	///TODO: Remove these 3 lines 
 	[defaults setBool:YES forKey:@"Wikipedia"];
@@ -75,8 +80,8 @@ const int kMoreTabBarIndex = 4;
 	[self initARView];
 	    	
     _beforeWasLandscape = NO;
-//    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 	
     ((UITabBarItem *)[self.tabBarController.tabBar.items objectAtIndex:0]).title = NSLocalizedString(@"Camera", @"First tabbar icon");
     ((UITabBarItem *)[self.tabBarController.tabBar.items objectAtIndex:1]).title = NSLocalizedString(@"Sources", @"2 tabbar icon");
@@ -88,12 +93,13 @@ const int kMoreTabBarIndex = 4;
 	
 	[self.window makeKeyAndVisible];
 	
-    if (![defaults boolForKey:@"mixareInitialized"]) {
-        UIAlertView *addAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"License",nil)message:@"Copyright (C) 2010- Peer internet solutions\n This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \n This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \nYou should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/" delegate:self cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil, nil];
-        [addAlert show];
-        [addAlert release];
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"mixareInitialized"];
-    }
+	///TODO: Remove later
+//    if (![defaults boolForKey:@"mixareInitialized"]) {
+//        UIAlertView *addAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"License",nil)message:@"Copyright (C) 2010- Peer internet solutions\n This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \n This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \nYou should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/" delegate:self cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil, nil];
+//        [addAlert show];
+//        [addAlert release];
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"mixareInitialized"];
+//    }
 	
 	return YES;
 }
@@ -119,21 +125,40 @@ const int kMoreTabBarIndex = 4;
 
 #pragma mark -
 #pragma mark locationManager
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-	if (!_firstPositionDetected) {
+	if (!_firstPositionDetected && self.auViewController != nil){
 		_firstPositionDetected = YES;
 		[self downloadData];
-		[self mapData];		
+		[self mapData];					
 	}
-//	if (self.auViewController != nil){
-//		CLLocation *newCenter = self.mainLocationManager.location;
-//		[newCenter release];
-//	}
 	
-//	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location manager" message:@"Your Location changed for 3 meters "  delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
-//	[alert show];
-//	[alert release];
+	// Notify all the delegates
+	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
+			//forward the call.
+		[self.locationDelegate locationManager:manager didUpdateToLocation:newLocation fromLocation:oldLocation];
+	}
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManager:didFailWithError:)]) {
+		//forward the call.
+		return [self.locationDelegate locationManager:manager didFailWithError:error];
+	}
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManager:didUpdateHeading:)]) {
+		//forward the call.
+		[self.locationDelegate locationManager:manager didUpdateHeading:newHeading];
+	}
+}
+
+- (BOOL)locationManagerShouldDisplayHeadingCalibration:(CLLocationManager *)manager {
+	if (self.locationDelegate && [self.locationDelegate respondsToSelector:@selector(locationManagerShouldDisplayHeadingCalibration:)]) {
+		//forward the call.
+		return [self.locationDelegate locationManagerShouldDisplayHeadingCalibration:manager];
+	}	
+	return YES;
 }
 
 #pragma mark -
@@ -143,11 +168,11 @@ const int kMoreTabBarIndex = 4;
     //Maintain the camera in Landscape orientation [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
     //UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
     if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
-//        [self setViewToLandscape:self.augViewController.view];
+		[self.auViewController willRotateToInterfaceOrientation:UIInterfaceOrientationLandscapeLeft	duration:1.0];
         _beforeWasLandscape = YES;
     }
     if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait && _beforeWasLandscape){
-//        [self setViewToPortrait:self.augViewController.view];
+		[self.auViewController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait	duration:1.0];
         _beforeWasLandscape = NO;
     }
 	
@@ -180,32 +205,16 @@ const int kMoreTabBarIndex = 4;
 		orientation = @"Orientación desconocida";		
 	}
     NSLog(@"DID ROTATE to orientation %@", orientation);
-	// -----------------------------------------------------------------------------
-    
 }
 
-//-(void)setViewToLandscape:(UIView*)viewObject {
-//    [viewObject setCenter:CGPointMake(160, 240)];
-//    CGAffineTransform cgCTM = CGAffineTransformMakeRotation(degreesToRadian(90));
-//    viewObject.transform = cgCTM;
-//    viewObject.bounds = CGRectMake(0, 0, 480, 320);
-//    maxRadiusLabel.frame = CGRectMake(318, 28, 30, 10);
-//}
-//
-//-(void)setViewToPortrait:(UIView*)viewObject{
-//    CGAffineTransform tr = viewObject.transform; // get current transform (portrait)
-//    tr = CGAffineTransformRotate(tr, -(M_PI / 2.0)); // rotate -90 degrees to go portrait
-//    viewObject.transform = tr; // set current transform 
-//    CGRectMake(0, 0, 320, 480);
-//    [viewObject setCenter:CGPointMake(240, 160)];
-//    maxRadiusLabel.frame= CGRectMake(158, 25, 30, 12);
-//}
-
 - (void)initARView {
-	self.auViewController = [[[AugmentedViewController alloc] initWithNibName:@"AugmentedViewController" bundle:nil] autorelease];
+	if (self.auViewController == nil) {
+		self.auViewController = [[[AugmentedViewController alloc] initWithNibName:@"AugmentedViewController" bundle:nil] autorelease];		
+	}
 	self.auViewController.debugMode = YES;
 	self.auViewController.ARViewDelegate = self;
-	[self.auViewController setAsLocationManagerController:self.mainLocationManager withDelegate:self];	
+	self.locationDelegate = self.auViewController;
+	[self.auViewController startListening:self.mainLocationManager];
 }
 
 - (void)initLocationManager{
@@ -241,7 +250,10 @@ const int kMoreTabBarIndex = 4;
 	}else
 		NSLog(@"no data received");
 	
-	[self.auViewController hideLoadingView];	
+	if (self.auViewController != nil && self.mainLocationManager != nil)
+		[self.auViewController recalculateDataWithNewLocation:self.mainLocationManager.location];
+	
+	[self.auViewController hideLoadingViewOnMainThread];	
 }
 
 //Method wich manages the download of data specified by the user. The standard source is wikipedia. By selecting the different sources in the sources
@@ -252,15 +264,15 @@ const int kMoreTabBarIndex = 4;
 
 -(void)downloadData{
 	JsonHandler *jHandler = [[JsonHandler alloc]init];
-	CLLocation * pos = self.mainLocationManager.location;
+	CLLocation *pos = self.mainLocationManager.location;
 	NSString *wikiData;
     NSString *mixareData;
     NSString *twitterData;
 	NSString *buzzData;
 	    
     if ([self checkIfDataSourceIsEnabled:@"Wikipedia"]){
-        NSLog(@"Downloading WIki data");
-        NSString   *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        NSLog(@"Downloading Wiki data");
+        NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
         NSLog(@"Language: %@",language);
         wikiData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:[DataSource createRequestURLFromDataSource:@"WIKIPEDIA" Lat:pos.coordinate.latitude Lon:pos.coordinate.longitude Alt:pos.altitude radius:_radius Lang:language]] encoding:NSUTF8StringEncoding error:nil];
         NSLog(@"Download done");
@@ -383,12 +395,11 @@ const int kMoreTabBarIndex = 4;
         [self downloadData];
 		[self mapData];		
         [self initARView];
+		
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 	} else {
-        [self.auViewController.locationManager stopUpdatingHeading];
-        [self.auViewController.locationManager stopUpdatingLocation];
-        [self.mainLocationManager stopUpdatingLocation];
+		[self.auViewController stopListening:self.mainLocationManager];
 		
         if (tabBarController.selectedIndex == kSourcesTabBarIndex) {
 
@@ -423,7 +434,7 @@ const int kMoreTabBarIndex = 4;
         }
 		
         if (tabBarController.selectedIndex == kMoreTabBarIndex ){ //_moreViewController
-            NSLog(@"latitude: %f", self.auViewController.locationManager.location.coordinate.latitude);
+            NSLog(@"latitude: %f", self.mainLocationManager.location.coordinate.latitude);
             [(MoreViewController*)viewController showGPSInfo:self.mainLocationManager.location.coordinate.latitude
 														 lng:self.mainLocationManager.location.coordinate.longitude
 														 alt:self.mainLocationManager.location.altitude
@@ -519,7 +530,7 @@ const int kMoreTabBarIndex = 4;
     [[NSUserDefaults standardUserDefaults] setFloat:slider.value forKey:@"radius"];
 	[self downloadData];
 	[self mapData];	
-    [self initARView];
+//    [self initARView];
     
 	NSLog(@"POIS CHANGED");	
 }

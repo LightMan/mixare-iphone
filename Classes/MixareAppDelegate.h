@@ -32,20 +32,18 @@
 	
 @private
 	CLLocationManager *_mainLocationManager;
+	id<CLLocationManagerDelegate> _locationDelegate;	
     BOOL _beforeWasLandscape;
 	BOOL _firstPositionDetected;
-	float _radius;
+	float _radius;	
+	
+    SourceViewController *_sourceViewController;
 	
 	//IBOutlets
     UIWindow *_window;		
 	UITabBarController *_tabBarController;
 	AugmentedViewController *_auViewController;
 	NSMutableArray * _poisData;
-
-// -----------------------------------------------------------------------------
-	
-    UILabel *maxRadiusLabel;
-    SourceViewController *_sourceViewController;
 }
 
 @property (nonatomic, retain) CLLocationManager *mainLocationManager;
@@ -55,22 +53,18 @@
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) IBOutlet AugmentedViewController *auViewController;
 
-// -----------------------------------------------------------------------------
+@property (nonatomic, assign) id<CLLocationManagerDelegate> locationDelegate;
 
-
-@property (nonatomic, retain) IBOutlet SourceViewController *sourceViewController;
+@property (nonatomic, retain) SourceViewController *sourceViewController;
 
 - (void)initARView;
 - (void)initLocationManager;
 - (void)mapData;
 - (void)downloadData;
 - (BOOL)checkIfDataSourceIsEnabled:(NSString *)source;
-//- (void)setViewToLandscape:(UIView*)viewObject;
-//- (void)setViewToPortrait:(UIView*)viewObject;
 
 // ARViewDelegate
 - (MarkerView *)viewForCoordinate:(PoiItem *)coordinate;
 - (void)viewDidClose;
-
 
 @end

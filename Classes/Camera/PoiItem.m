@@ -47,7 +47,8 @@
 }
 
 - (BOOL)isEqualToCoordinate:(PoiItem *)otherCoordinate {
-    if (self == otherCoordinate) return YES;
+    if (self == otherCoordinate)
+		return YES;
     
 	BOOL equal = self.radialDistance == otherCoordinate.radialDistance;
 	equal = equal && self.inclination == otherCoordinate.inclination;

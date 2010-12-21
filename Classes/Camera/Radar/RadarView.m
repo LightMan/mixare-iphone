@@ -46,8 +46,8 @@
     
     _range = _radius *1000;
     float scale = _range / RADIUS;
-    if(_pois != nil){
-        for(PhysicalPlace * poi in _pois){
+    if (self.pois != nil){
+        for(PhysicalPlace * poi in self.pois){
 			
 			float x = RADIUS + sinf(poi.azimuth) * poi.radialDistance/scale;
 			float y = RADIUS - cosf(poi.azimuth) * poi.radialDistance/scale;
