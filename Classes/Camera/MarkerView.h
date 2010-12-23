@@ -18,24 +18,43 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "PoiItem.h"
 
+@protocol MarkerViewDelegate;
 
 @interface MarkerView: UIView {
 
 @private
     UIView *_viewTouched;
     NSString *_url;
-    UIView *loadView;
 	BOOL _touchesMoved;
+	PoiItem *_poiItem;
+	
+	id<MarkerViewDelegate> _delegate;
+	
+	UILabel* _lblTitle;
+	UIButton* _btnDetail;
+
+// -----------------------------------------------------------------------------
+	UIView *loadView;
 }
 
 @property (nonatomic, retain) UIView *viewTouched;
+@property (nonatomic, retain) PoiItem *poiItem;
 @property (nonatomic, retain) NSString *url;
+@property (nonatomic, assign) id<MarkerViewDelegate> delegate;
 
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event;
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-//- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
-//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
-//- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+@property (nonatomic, retain) IBOutlet UILabel* lblTitle;
+@property (nonatomic, retain) IBOutlet UIButton* btnDetail;
+
+- (IBAction)btnDetailPressed;
 
 @end
+
+@protocol MarkerViewDelegate
+
+@optional
+- (void)markerViewPressed:(MarkerView*)markerView;
+
+@end
+

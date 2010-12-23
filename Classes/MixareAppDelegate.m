@@ -24,7 +24,7 @@
 #import "DataSource.h"
 
 
-#define degreesToRadian(x) (M_PI * (x) / 180.0)
+// #define degreesToRadian(x) (M_PI * (x) / 180.0)
 #define CAMERA_TRANSFORM 1.12412
  
 
@@ -175,6 +175,15 @@ const float kDefaultRadius = 5.0f;
 		[self.auViewController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait	duration:1.0];
         _beforeWasLandscape = NO;
     }
+	
+    if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationFaceUp){
+		[self.auViewController willRotateToInterfaceOrientation:UIInterfaceOrientationLandscapeLeft duration:1.0];
+		[self.auViewController deviceIsFaceUp:YES];	
+        _beforeWasLandscape = YES;
+    }else {
+		[self.auViewController deviceIsFaceUp:NO];	
+	}
+
 	
 	// -----------------------------------------------------------------------------
 	// Debug Orientation
@@ -534,6 +543,7 @@ const float kDefaultRadius = 5.0f;
     
 	NSLog(@"POIS CHANGED");	
 }
+
 
 @end
 

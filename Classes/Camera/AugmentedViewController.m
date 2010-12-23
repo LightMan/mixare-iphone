@@ -22,23 +22,13 @@
 #define VIEWPORT_WIDTH_RADIANS 0.5
 #define VIEWPORT_HEIGHT_RADIANS 0.7392
 
-@interface UIViewController(OrientationPatch)
--(UIDeviceOrientation)interfaceOrientation;
-@end
-
-@implementation UIViewController(OrientationPatch)
-
--(UIDeviceOrientation)interfaceOrientation
-{
-	return [[UIDevice currentDevice] orientation];
-}
-
-@end
-
 // Private methods and properties
 @interface AugmentedViewController()
 
 @property (nonatomic, retain) UIImagePickerController *cameraController;
+
+- (MarkerView *)viewForCoordinate:(PoiItem *)coordinate;
+- (void)resizeViewsByDistance;
 
 @end
 
@@ -47,6 +37,7 @@
 
 // To filter the little movements of the accelerometer
 const float kFilteringFactor = 0.05f;
+const float kInitialScaleFactor = 1.5f;
 
 // -----------------------------------------------------------------------------
 
@@ -59,6 +50,7 @@ const float kFilteringFactor = 0.05f;
 @synthesize accelerometerDelegate = _accelerometerDelegate;
 @synthesize accelerometerManager = _accelerometerManager;
 @synthesize updateTimer = _updateTimer;
+@synthesize selectedPoi = _selectedPoi;
 
 @synthesize debugMode = _debugMode;
 @synthesize lblDebug = _lblDebug;
@@ -71,6 +63,13 @@ const float kFilteringFactor = 0.05f;
 @synthesize radiusSlider = _radiusSlider;
 @synthesize lblCurrentDistance = _lblCurrentDistance;
 @synthesize notificationView = _notificationView;
+@synthesize poiSelectedView = _poiSelectedView;
+
+@synthesize lblPoiViewAddress = _lblPoiViewAddress;
+@synthesize lblPoiViewTitle = _lblPoiViewTitle;
+@synthesize imgPoiViewIcon = _imgPoiViewIcon;
+@synthesize compassView = _compassView;
+
 
 // -----------------------------------------------------------------------------
 
@@ -97,7 +96,7 @@ const float kFilteringFactor = 0.05f;
 	self.maximumScaleDistance = 0.0;
 	self.minimumScaleFactor = 0.6;
 	
-	self.rotateViewsBasedOnPerspective = YES;
+	self.rotateViewsBasedOnPerspective = NO;
 	self.maximumRotationAngle = M_PI / 6.0;
 	
 	self.wantsFullScreenLayout = NO;
@@ -126,9 +125,6 @@ const float kFilteringFactor = 0.05f;
 	if (self.debugMode) {
 		self.lblDebug.hidden = NO;
 	}
-	
-//	self.overlayView = [[[UIView alloc] initWithFrame:self.cameraController.view.bounds] autorelease];	
-//	[self.view addSubview:self.overlayView];	
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -169,6 +165,15 @@ const float kFilteringFactor = 0.05f;
 	self.radarScopeView = nil;
 	self.lblCurrentDistance = nil;
 	self.lblDebug = nil;
+	self.overlayView = nil;
+	self.notificationView = nil;
+	self.poiSelectedView = nil;
+	self.lblPoiViewTitle = nil;
+	self.lblPoiViewAddress = nil;
+	self.imgPoiViewIcon = nil;
+//	self.compassView = nil;
+	
+	[super viewDidUnload];
 }
 
 
@@ -176,13 +181,20 @@ const float kFilteringFactor = 0.05f;
 	[_centerLocation release];
 	[_poisViews release];
 	[_poisCoordinates release];
-	[_overlayView release];
+	[_selectedPoi release];
 	
 	[_radiusSlider release];
 	[_radarView release];
 	[_radarScopeView release];
 	[_lblCurrentDistance release];
 	[_lblDebug release];
+	[_overlayView release];
+	[_notificationView release];
+	[_poiSelectedView release];
+	[_lblPoiViewTitle release];
+	[_lblPoiViewAddress release];
+	[_imgPoiViewIcon release];
+	[_compassView release];
 	
     [super dealloc];
 }
@@ -339,7 +351,9 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 	}
 	
 	//message the delegate.
-	[self.poisViews addObject:[self.ARViewDelegate viewForCoordinate:coordinate]];
+	///TODO: Changed for local generation
+//	[self.poisViews addObject:[self.ARViewDelegate viewForCoordinate:coordinate]];
+	[self.poisViews addObject:[self viewForCoordinate:coordinate]];	
 }
 
 - (void)removeCoordinates:(NSMutableArray *)coordinates {	
@@ -363,6 +377,32 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 			}
 		}
 	}
+	
+	if (self.scaleViewsBasedOnDistance)	
+		[self resizeViewsByDistance];
+}
+
+- (void)resizeViewsByDistance {
+
+	int index = 0;
+	for (PoiItem *item in self.poisCoordinates) {
+		MarkerView *viewToDraw = [self.poisViews objectAtIndex:index++];
+		CGPoint loc = [self pointInView:self.overlayView forCoordinate:item];			
+
+		CGFloat scaleFactor = kInitialScaleFactor - self.minimumScaleFactor * (item.radialDistance / self.maximumScaleDistance);
+			
+		float width = viewToDraw.frame.size.width * scaleFactor;
+		float height = viewToDraw.frame.size.height * scaleFactor;
+			
+		viewToDraw.frame = CGRectMake(loc.x - width/2.0,loc.y - height/2.0, width, height);
+		
+		//set the scale if it needs it.
+		CATransform3D transform = CATransform3DIdentity;
+		//scale the perspective transform if we have one.
+		transform = CATransform3DScale(transform, scaleFactor, scaleFactor, scaleFactor);
+		viewToDraw.layer.transform = transform;
+	}
+			
 }
 
 - (void)updateLocations:(NSTimer *)timer {
@@ -375,38 +415,19 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 	int index = 0;
     NSMutableArray * radarPointValues= [[NSMutableArray alloc]initWithCapacity:[self.poisCoordinates count]];
 
-
-	BOOL test = YES;
-
 	for (PoiItem *item in self.poisCoordinates) {
 		
 		MarkerView *viewToDraw = [self.poisViews objectAtIndex:index];
 		
 		if ([self viewportContainsCoordinate:item]) {
 			
-			CGPoint loc = [self pointInView:self.overlayView forCoordinate:item];
-			if (test) {
-				test = NO;
-				NSLog(@"Punto de la vista (%.f,%.f), My Azimuth %f", loc.x, loc.y, self.centerCoordinate.azimuth); /* DEBUG LOG */
-			}
-			
-			CGFloat scaleFactor = 1.5;
-			if (self.scaleViewsBasedOnDistance) {
-				scaleFactor = 1.0 - self.minimumScaleFactor * (item.radialDistance / self.maximumScaleDistance);
-			}
-			
-			float width = viewToDraw.bounds.size.width * scaleFactor;
-			float height = viewToDraw.bounds.size.height * scaleFactor;
-			
-			viewToDraw.frame = CGRectMake(loc.x - width / 2.0, loc.y-height / 2.0, width, height);
+			CGPoint loc = [self pointInView:self.overlayView forCoordinate:item];			
+
+			float width = viewToDraw.frame.size.width;
+			float height = viewToDraw.frame.size.height;
+			viewToDraw.frame = CGRectMake(loc.x - width/2.0,loc.y - height/2.0, width, height);			
 			
 			CATransform3D transform = CATransform3DIdentity;
-			
-			//set the scale if it needs it.
-			if (self.scaleViewsBasedOnDistance) {
-				//scale the perspective transform if we have one.
-				transform = CATransform3DScale(transform, scaleFactor, scaleFactor, scaleFactor);
-			}
 			
 			if (self.rotateViewsBasedOnPerspective) {
 				transform.m34 = 1.0 / 300.0;
@@ -423,7 +444,7 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 			viewToDraw.layer.transform = transform;
 			
 			//if we don't have a superview, set it up.
-			if (!(viewToDraw.superview)) {
+			if (viewToDraw.superview == nil) {
 				[self.overlayView addSubview:viewToDraw];
 				[self.overlayView sendSubviewToBack:viewToDraw];
 			}
@@ -431,6 +452,7 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 			[viewToDraw removeFromSuperview];
 			viewToDraw.transform = CGAffineTransformIdentity;
 		}
+		
         CGPoint loc = [self pointInView:self.overlayView forCoordinate:item];
         item.radarPos = loc;
 //        if( fmod((locationManager.heading.trueHeading+item.azimuth),360)==0){
@@ -443,7 +465,6 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 	}
 	
     float radius = [[[NSUserDefaults standardUserDefaults] objectForKey:@"radius"] floatValue];
-    
 	if(radius <= 0 || radius > 100){
         radius = 5.0;
     }
@@ -469,15 +490,19 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
             self.centerCoordinate.azimuth = fmod(self.centerCoordinate.azimuth + (M_PI/2),360);
     }
 	
-    int gradToRotate = newHeading.trueHeading-90-22.5;
+    int gradToRotate = newHeading.magneticHeading - 90.0 - (kRadarScopeAngle / 2);
     if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationLandscapeLeft){
-        gradToRotate+= 90;
+        gradToRotate += 90.0f;
     }
     if (gradToRotate < 0){
         gradToRotate= 360 + gradToRotate;
     }
 	self.radarScopeView.referenceAngle = gradToRotate;
     [self.radarScopeView setNeedsDisplay];
+	
+	if (self.compassView.hidden == NO) {
+		self.compassView.currentHeading = newHeading.magneticHeading;
+	}
 }
 
 - (void)startListening:(CLLocationManager *)locationManager {
@@ -570,6 +595,114 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 
 - (void)hideLoadingViewOnMainThread {
 	[self performSelectorOnMainThread:@selector(hideLoadingView) withObject:nil waitUntilDone:YES];
+}
+
+#pragma mark -
+#pragma mark ARViewDelegate
+
+- (MarkerView *)viewForCoordinate:(PoiItem *)coordinate {	
+
+	NSArray *nibItems = [[NSBundle mainBundle] loadNibNamed:@"MarkerView" owner:self options:nil];
+	
+	MarkerView *tempView = nil;
+	for (NSObject* nibItem in nibItems) {
+		if ([nibItem isKindOfClass:[MarkerView class]])
+			tempView = (MarkerView*) nibItem;
+	}
+	
+	tempView.lblTitle.text = coordinate.title;
+    tempView.url = coordinate.url;
+	tempView.poiItem = coordinate;
+	tempView.delegate = self;
+	
+	return tempView;
+	
+//	const float kBoxWidth = 150.0f;
+//	const float kBoxHeight = 100.0f;	
+//	CGRect theFrame = CGRectMake(0, 0, kBoxWidth, kBoxHeight);
+//	MarkerView *tempView = [[MarkerView alloc] initWithFrame:theFrame];
+	
+//	UIImage* buttonImage = nil;
+//	if ([coordinate.source isEqualToString:@"WIKIPEDIA"] || [coordinate.source isEqualToString:@"MIXARE"]){
+//		buttonImage = [UIImage imageNamed:@"circle.png"];
+//	}else if([coordinate.source isEqualToString:@"TWITTER"]){
+//        buttonImage = [UIImage imageNamed:@"twitter_logo.png"];
+//	}else if([coordinate.source isEqualToString:@"BUZZ"]){
+//		buttonImage = [UIImage imageNamed:@"buzz_logo.png"];
+//	} else
+//		buttonImage = [UIImage imageNamed:@"circle.png"]
+//	
+//	CGRect buttonFrame = CGRectMake( (kBoxWidth - buttonImage.size.width) / 2.0, 0, buttonImage.size.width, buttonImage.size.height);
+//	
+//	UIButton *poiButton = [[UIButton alloc] initWithFrame:buttonFrame];
+//	[poiButton setImage:buttonImage forState:UIControlStateNormal];
+//	[poiButton addTarget:self action:@selector(poiButtonPressed2:) forControlEvents:UIControlEventTouchDown];
+//		
+//	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kBoxHeight / 2.0 , kBoxWidth, 20.0)];
+//	titleLabel.backgroundColor = [UIColor colorWithWhite:.3 alpha:.8];
+//	titleLabel.textColor = [UIColor whiteColor];
+//	titleLabel.textAlignment = UITextAlignmentCenter;
+//	titleLabel.text = coordinate.title;
+//    if ([coordinate.source isEqualToString:@"BUZZ"]){
+//        //wrapping long buzz messages
+//        titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
+//        titleLabel.numberOfLines = 0;
+//        CGRect frame = [titleLabel frame];
+//        CGSize size = [titleLabel.text sizeWithFont:titleLabel.font	constrainedToSize:CGSizeMake(frame.size.width, 9999) lineBreakMode:UILineBreakModeClip];
+//        frame.size.height = size.height;
+//        [titleLabel setFrame:frame];
+//    }else{
+//        //Markers get automatically resized
+//        [titleLabel sizeToFit];
+//	}
+//	titleLabel.frame = CGRectMake(kBoxWidth / 2.0 - titleLabel.frame.size.width / 2.0 - 4.0, buttonImage.size.height + 5, titleLabel.frame.size.width + 8.0, titleLabel.frame.size.height + 8.0);
+		
+//	[tempView addSubview:titleLabel];
+//	[tempView addSubview:poiButton];	
+//	[poiButton release];
+//	[titleLabel release];
+	
+//    tempView.userInteractionEnabled = YES;    
+//	return [tempView autorelease];
+}
+
+//The iPhone is faceUp
+- (void)deviceIsFaceUp:(BOOL)faceUp {
+	NSLog(@"Face Up changed to %d", faceUp); /* DEBUG LOG */
+	if (self.compassView != nil)
+		self.compassView.hidden = !(_compassMode && faceUp);
+}
+
+#pragma mark -
+#pragma mark MarkerView delegate
+
+- (void)markerViewPressed:(MarkerView*)markerView {
+	NSLog(@"Pressed %@", markerView.poiItem.title); /* DEBUG LOG */
+	self.selectedPoi = markerView.poiItem;
+	self.lblPoiViewTitle.text = self.selectedPoi.title;
+	self.lblPoiViewAddress.text = self.selectedPoi.subtitle;
+	self.poiSelectedView.hidden = NO;
+}
+
+- (IBAction)closePoiViewButtonPressed {
+	self.poiSelectedView.hidden = YES;
+}
+
+- (IBAction)compassPoiViewButtonPressed {
+	NSLog(@"Compass pressed"); /* DEBUG LOG */
+	
+	if (self.compassView == nil) {
+		NSArray *nibItems = [[NSBundle mainBundle] loadNibNamed:@"UICompassView" owner:self options:nil];
+		
+		for (NSObject* nibItem in nibItems) {
+			if ([nibItem isKindOfClass:[UICompassView class]])
+				self.compassView = (UICompassView*) nibItem;
+		}
+		[self.view addSubview:self.compassView];		
+	}
+	_compassMode = YES;
+	self.compassView.destinationPoi = self.selectedPoi;
+	self.poiSelectedView.hidden = YES;
 }
 
 @end

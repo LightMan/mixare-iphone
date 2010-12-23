@@ -16,7 +16,6 @@
  * this program. If not, see <http://www.gnu.org/licenses/> */
 
 #import <Foundation/Foundation.h>
-
 #import <MapKit/MapKit.h>
 
 #define degreesToRadians(x) (M_PI * (x) / 180.0)

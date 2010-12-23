@@ -22,41 +22,36 @@
 
 @implementation MarkerView
 
+@synthesize poiItem = _poiItem;
 @synthesize viewTouched = _viewTouched;
 @synthesize url = _url;
+@synthesize delegate = _delegate;
 
+@synthesize lblTitle = _lblTitle;
+@synthesize btnDetail = _btnDetail;
 
-
-////The basic idea here is to intercept the view which is sent back as the firstresponder in hitTest.
-////We keep it preciously in the property viewTouched and we return our view as the firstresponder.
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-//    NSLog(@"Hit Test");
-//    _viewTouched = [super hitTest:point withEvent:event];
-//    return self;
-//}
-//
-////Then, when an event is fired, we log this one and then send it back to the viewTouched we kept, and voilà!!! :)
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    NSLog(@"Touch Began");
-//    //[viewTouched touchesBegan:touches withEvent:event];
-//}
-//- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-//    NSLog(@"Touch Moved");
-//	_touchesMoved = YES;
-//    //[viewTouched touchesMoved:touches withEvent:event];
-//}
-//
-//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-//    NSLog(@"Touched Ended POI %@", self.url);
-//	return;
-//	
-//	//If there was a drag movement then ignore the touch up 
-//	if (_touchesMoved) {
-//		_touchesMoved = NO;
+/*
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+//	if (self.lblTitle.text == nil) {
+//		[super touchesEnded:touches withEvent:event];
 //		return;
 //	}
-//	
-//    //[viewTouched touchesEnded:touches withEvent:event];
+		
+	//If there was a drag movement then ignore the touch up 
+	if (_touchesMoved) {
+		_touchesMoved = NO;
+		return;
+	}
+	
+	if (self.lblTitle.text != nil) {
+		for (UITouch* touch in [touches allObjects]){
+			CGPoint pos = [touch locationInView:self];
+			NSLog(@"touched %@ in %.f %.f ", self.lblTitle.text, pos.x, pos.y);
+		}
+	}
+	
+	
+    //[viewTouched touchesEnded:touches withEvent:event];
 //    UIButton * closeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 //    [closeButton setTitle:@"Close" forState:UIControlStateNormal];
 //	[closeButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -103,30 +98,38 @@
 //    [infoView addSubview:closeButton];
 //	//[infoView addSubview:transparentButton];
 //    [UIView commitAnimations];
-//}
-//
-//-(void)buttonClick:(id) sender{
-//    UIView *viewToRemove = (UIView*)[sender superview];
-//    
-//    [UIView beginAnimations:nil context:nil];
-//    [UIView setAnimationDuration:0.5]; 
-//    [UIView setAnimationTransition:UIViewAnimationCurveEaseInOut forView:self.superview cache:YES];
-//    viewToRemove.frame = CGRectMake(0, 480, 0, 0);
-//    viewToRemove.alpha = 0;
-//    [UIView setAnimationDidStopSelector:@selector(removeFromSuperview)];
-//    [UIView commitAnimations];
-//}
-//
+}
+*/
+
+-(void)buttonClick:(id) sender{
+    UIView *viewToRemove = (UIView*)[sender superview];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5]; 
+    [UIView setAnimationTransition:UIViewAnimationCurveEaseInOut forView:self.superview cache:YES];
+    viewToRemove.frame = CGRectMake(0, 480, 0, 0);
+    viewToRemove.alpha = 0;
+    [UIView setAnimationDidStopSelector:@selector(removeFromSuperview)];
+    [UIView commitAnimations];
+}
+
 //- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
 //    
 //}
 
 - (void)dealloc {
     [_viewTouched release];
-
+	[_btnDetail release];
+	[_lblTitle release];
+	[_poiItem release];
+	
     [super dealloc];
 }
 
+- (IBAction)btnDetailPressed {
+	NSLog(@"Pressed %@", self.lblTitle.text); /* DEBUG LOG */
+	[self.delegate markerViewPressed:self];
+}
 
 #pragma mark WebViewDelegate
 /*- (void)webViewDidStartLoad:(UIWebView *)webView{

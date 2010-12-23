@@ -21,6 +21,7 @@
 #import "RadarView.h"
 #import "PoiItem.h"
 #import "RadarScopeView.h"
+#import "UICompassView.h"
 
 @protocol ARViewDelegate
 
@@ -31,7 +32,7 @@
 @end
 
 
-@interface AugmentedViewController : UIViewController <UIAccelerometerDelegate, CLLocationManagerDelegate> {		
+@interface AugmentedViewController : UIViewController <MarkerViewDelegate, UIAccelerometerDelegate, CLLocationManagerDelegate> {		
 	BOOL scaleViewsBasedOnDistance;
 	double maximumScaleDistance;
 	double minimumScaleFactor;
@@ -44,16 +45,21 @@
 	
 @private
 	
-	BOOL _debugMode;
 	NSTimer *_updateTimer;
 		
 // -----------------------------------------------------------------------------
+
+	BOOL _debugMode;
+	BOOL _compassMode;
+
 	UIImagePickerController *_cameraController;
 	RadarView *_radarView;
     RadarScopeView * _radarScopeView;
 	UIAccelerometer *_accelerometerManager;
 	PoiItem *_centerCoordinate;
+	PoiItem *_selectedPoi;
 	CLLocation *_centerLocation;	
+	
 
 	id<ARViewDelegate> _ARViewdelegate;
 	id<UIAccelerometerDelegate> _accelerometerDelegate;
@@ -61,13 +67,19 @@
 	
 	NSMutableArray *_poisCoordinates;
 	NSMutableArray *_poisViews;
-	MarkerView *_overlayView;
+	
 	
 	//IBOutlets
 	UISlider* _radiusSlider;	
 	UILabel* _lblCurrentDistance;	
     UIView *_notificationView;	
 	UILabel *_lblDebug;
+	UIView *_overlayView;
+	UIView *_poiSelectedView;
+	UILabel *_lblPoiViewTitle;
+	UILabel *_lblPoiViewAddress;	
+	UIImageView *_imgPoiViewIcon;
+	UICompassView *_compassView;	
 }
 
 @property (nonatomic) BOOL debugMode;
@@ -79,6 +91,9 @@
 @property (nonatomic, retain) NSMutableArray *poisCoordinates;
 @property (nonatomic, retain) NSMutableArray *poisViews;
 @property (nonatomic, retain) NSTimer *updateTimer;
+@property (nonatomic, retain) PoiItem *selectedPoi;
+
+@property (nonatomic, retain) UICompassView *compassView;
 
 @property (nonatomic, assign) id<ARViewDelegate> ARViewDelegate;
 @property (nonatomic, assign) id<UIAccelerometerDelegate> accelerometerDelegate;
@@ -91,19 +106,27 @@
 @property (nonatomic, retain) IBOutlet UILabel* lblCurrentDistance;
 @property (nonatomic, retain) IBOutlet UIView *notificationView;
 @property (nonatomic, retain) IBOutlet UILabel *lblDebug;
+@property (nonatomic, retain) IBOutlet UIView *overlayView;
+@property (nonatomic, retain) IBOutlet UIView *poiSelectedView;
 
-@property (nonatomic, retain) IBOutlet MarkerView *overlayView;
+//PoiView IBOutlets
+@property (nonatomic, retain) IBOutlet UILabel *lblPoiViewTitle;
+@property (nonatomic, retain) IBOutlet UILabel *lblPoiViewAddress;
+@property (nonatomic, retain) IBOutlet UIImageView *imgPoiViewIcon;
+
 
 //IBActions
 - (IBAction)radiusSliderChanged:(UISlider*)slider;
 - (IBAction)closeButtonPressed;
 - (IBAction)radiusSliderTouchUp:(UISlider*)slider;
+- (IBAction)closePoiViewButtonPressed;
+- (IBAction)compassPoiViewButtonPressed;
 
 //Public methods
 - (void)closeCameraView;
 - (void)showLoadingViewOnMainThread;
 - (void)hideLoadingViewOnMainThread;
-
+- (void)deviceIsFaceUp:(BOOL)faceUp;
 
 // -----------------------------------------------------------------------------
 

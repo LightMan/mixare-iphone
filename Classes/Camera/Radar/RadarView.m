@@ -39,30 +39,28 @@
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     CGContextSetRGBFillColor(contextRef, 0, 0, 115, 0.3);
     CGContextSetRGBStrokeColor(contextRef, 0, 0, 125, 0.1);
-     
+	
     // Draw a radar and the view port 
     CGContextFillEllipseInRect(contextRef, CGRectMake(0.5, 0.5, RADIUS*2, RADIUS*2)); 
     CGContextSetRGBStrokeColor(contextRef, 0, 255, 0, 0.5);
     
     _range = _radius *1000;
     float scale = _range / RADIUS;
-    if (self.pois != nil){
-        for(PhysicalPlace * poi in self.pois){
-			
-			float x = RADIUS + sinf(poi.azimuth) * poi.radialDistance/scale;
-			float y = RADIUS - cosf(poi.azimuth) * poi.radialDistance/scale;
-			
-            //drawing the radar point
-            if([poi.source isEqualToString:@"WIKIPEDIA"]){
-                CGContextSetRGBFillColor(contextRef, 255, 0, 0, 1);
-            }else if([poi.source isEqualToString:@"BUZZ"]){
-                CGContextSetRGBFillColor(contextRef, 0, 255, 0, 1);
-            }
-            if(x <= RADIUS*2 && x>=0 && y>=0 && y <= RADIUS*2){
-                CGContextFillEllipseInRect(contextRef, CGRectMake(x,y, 2, 2)); 
-            }
-        }
-    }
+	
+    for(PhysicalPlace *poi in self.pois){
+		float x = RADIUS + sinf(poi.azimuth) * poi.radialDistance/scale;
+		float y = RADIUS - cosf(poi.azimuth) * poi.radialDistance/scale;
+		
+		//drawing the radar point
+		if([poi.source isEqualToString:@"WIKIPEDIA"]){
+			CGContextSetRGBFillColor(contextRef, 255, 0, 0, 1);
+		}else if([poi.source isEqualToString:@"BUZZ"]){
+			CGContextSetRGBFillColor(contextRef, 0, 255, 0, 1);
+		}
+		if(x <= RADIUS*2 && x>=0 && y>=0 && y <= RADIUS*2){
+			CGContextFillEllipseInRect(contextRef, CGRectMake(x,y, 2, 2)); 
+		}
+	}
 	
 }
 

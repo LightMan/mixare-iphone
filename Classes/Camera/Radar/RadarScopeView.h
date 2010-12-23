@@ -20,6 +20,7 @@
 
 #import <UIKit/UIKit.h>
 
+extern const float kRadarScopeAngle;
 
 @interface RadarScopeView : UIView {
 	

@@ -61,9 +61,13 @@
 		FA61732012B670A10019A590 /* RadarScopeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61731B12B670A10019A590 /* RadarScopeView.m */; };
 		FA61732A12B670FA0019A590 /* PhysicalPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61732712B670FA0019A590 /* PhysicalPlace.m */; };
 		FA61732B12B670FA0019A590 /* PoiItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61732912B670FA0019A590 /* PoiItem.m */; };
+		FA68C19212C251A800C85226 /* UICompassView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA68C19112C251A800C85226 /* UICompassView.m */; };
+		FA68C19612C251C100C85226 /* UICompassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA68C19512C251C100C85226 /* UICompassView.xib */; };
 		FA72F35F12B7B653004739A8 /* AugmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72F35D12B7B653004739A8 /* AugmentedViewController.m */; };
 		FA72F36012B7B653004739A8 /* AugmentedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA72F35E12B7B653004739A8 /* AugmentedViewController.xib */; };
 		FA8BC7D512BA245800D01D6E /* MixareAppDelegate.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8BC7D412BA245800D01D6E /* MixareAppDelegate.xib */; };
+		FA907F0412C37BB800D14251 /* directionArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA907F0312C37BB800D14251 /* directionArrow.png */; };
+		FAE03FBD12C0D95000D3F37B /* MarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE03FBC12C0D95000D3F37B /* MarkerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,10 +151,15 @@
 		FA61732712B670FA0019A590 /* PhysicalPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicalPlace.m; sourceTree = "<group>"; };
 		FA61732812B670FA0019A590 /* PoiItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiItem.h; sourceTree = "<group>"; };
 		FA61732912B670FA0019A590 /* PoiItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiItem.m; sourceTree = "<group>"; };
+		FA68C19012C251A800C85226 /* UICompassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICompassView.h; sourceTree = "<group>"; };
+		FA68C19112C251A800C85226 /* UICompassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICompassView.m; sourceTree = "<group>"; };
+		FA68C19512C251C100C85226 /* UICompassView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICompassView.xib; sourceTree = "<group>"; };
 		FA72F35C12B7B653004739A8 /* AugmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AugmentedViewController.h; sourceTree = "<group>"; };
 		FA72F35D12B7B653004739A8 /* AugmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AugmentedViewController.m; sourceTree = "<group>"; };
 		FA72F35E12B7B653004739A8 /* AugmentedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AugmentedViewController.xib; sourceTree = "<group>"; };
 		FA8BC7D412BA245800D01D6E /* MixareAppDelegate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MixareAppDelegate.xib; sourceTree = "<group>"; };
+		FA907F0312C37BB800D14251 /* directionArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = directionArrow.png; sourceTree = "<group>"; };
+		FAE03FBC12C0D95000D3F37B /* MarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +380,7 @@
 		FA6172ED12B653010019A590 /* reality */ = {
 			isa = PBXGroup;
 			children = (
+				FA907F0312C37BB800D14251 /* directionArrow.png */,
 				FA6172EE12B653010019A590 /* circle.png */,
 			);
 			path = reality;
@@ -384,6 +394,10 @@
 				FA72F35E12B7B653004739A8 /* AugmentedViewController.xib */,
 				FA61731512B670A10019A590 /* MarkerView.h */,
 				FA61731612B670A10019A590 /* MarkerView.m */,
+				FAE03FBC12C0D95000D3F37B /* MarkerView.xib */,
+				FA68C19012C251A800C85226 /* UICompassView.h */,
+				FA68C19112C251A800C85226 /* UICompassView.m */,
+				FA68C19512C251C100C85226 /* UICompassView.xib */,
 				FA61732612B670FA0019A590 /* PhysicalPlace.h */,
 				FA61732712B670FA0019A590 /* PhysicalPlace.m */,
 				FA61732812B670FA0019A590 /* PoiItem.h */,
@@ -487,6 +501,9 @@
 				FA6172EF12B653010019A590 /* circle.png in Resources */,
 				FA72F36012B7B653004739A8 /* AugmentedViewController.xib in Resources */,
 				FA8BC7D512BA245800D01D6E /* MixareAppDelegate.xib in Resources */,
+				FAE03FBD12C0D95000D3F37B /* MarkerView.xib in Resources */,
+				FA68C19612C251C100C85226 /* UICompassView.xib in Resources */,
+				FA907F0412C37BB800D14251 /* directionArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +535,7 @@
 				FA61732A12B670FA0019A590 /* PhysicalPlace.m in Sources */,
 				FA61732B12B670FA0019A590 /* PoiItem.m in Sources */,
 				FA72F35F12B7B653004739A8 /* AugmentedViewController.m in Sources */,
+				FA68C19212C251A800C85226 /* UICompassView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

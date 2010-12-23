@@ -16,7 +16,6 @@
  * this program. If not, see <http://www.gnu.org/licenses/> */
 #import "PoiItem.h"
 
-
 @implementation PoiItem
 
 @synthesize radialDistance, inclination, azimuth;
